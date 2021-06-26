@@ -28,12 +28,12 @@ It guides people to different types of food recipes.
 ---------------------------------------------------------------------------------------------------------------------
 # Wireframes :
 
-![MAIN](/images/Screenshot_1.png)
-![CATEGORY](/images/Screenshot_2.png)
-![PROFILE](/images/Screenshot_3.png)
-![NEWS](/images/Screenshot_4.png)
-![ABOUTME](/images/Screenshot_5.png)
-![REGISTER](/images/Screenshot_6.png)
+![MAIN](./images/Screenshot_1.png)
+![CATEGORY](./images/Screenshot_2.png)
+![PROFILE](./images/Screenshot_3.png)
+![NEWS](./images/Screenshot_4.png)
+![ABOUTME](./images/Screenshot_5.png)
+![REGISTER](./images/Screenshot_6.png)
 
 ---------------------------------------------------------------------------------------------------------------------
 
