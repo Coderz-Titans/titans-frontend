@@ -28,13 +28,18 @@ It guides people to different types of food recipes.
 ---------------------------------------------------------------------------------------------------------------------
 # Wireframes :
 
-![MAIN](Screenshot_1.png)
-![CATEGORY](./images/Screenshot_2.png)
-![PROFILE](./images/Screenshot_3.png)
-![NEWS](./images/Screenshot_4.png)
-![ABOUTME](./images/Screenshot_5.png)
-![REGISTER](./images/Screenshot_6.png)
+![MAIN](/images/Screenshot_1.png)
+![CATEGORY](/images/Screenshot_2.png)
+![PROFILE](/images/Screenshot_3.png)
+![NEWS](/images/Screenshot_4.png)
+![ABOUTME](/images/Screenshot_5.png)
+![REGISTER](/images/Screenshot_6.png)
 
 ---------------------------------------------------------------------------------------------------------------------
-
+# USER STORIES : 
+- As a user, I want a page where I can find all my-targeted-recipies.
+- As a user, I want to save certain recipies. 
+- As a user, I want to interact with other recipies. 
+- As a user, I want to share my own recipies with others. 
+- As a user, I want to be able to follow other people. 
 
