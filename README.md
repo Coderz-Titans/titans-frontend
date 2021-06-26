@@ -23,17 +23,12 @@ It guides people to different types of food recipes.
 ---------------------------------------------------------------------------------------------------------------------
 # Domain Modeling : 
 
-![DATABASE](/images/Screenshot_8.png)
+https://docs.google.com/document/d/1Ttg4U8wUuYklIU0iK4aq9cR7tyAWd6D9htSQmsacbr0/edit?usp=sharing
 
 ---------------------------------------------------------------------------------------------------------------------
 # Wireframes :
 
-![MAIN](/images/Screenshot_1.png)
-![CATEGORY](/images/Screenshot_2.png)
-![PROFILE](/images/Screenshot_3.png)
-![NEWS](/images/Screenshot_4.png)
-![ABOUTME](/images/Screenshot_5.png)
-![REGISTER](/images/Screenshot_6.png)
+https://docs.google.com/document/d/1h8Horimj6TpCoRULUnORSjZVth_MTfcQ361XI7KBaUA/edit?usp=sharing
 
 ---------------------------------------------------------------------------------------------------------------------
 # USER STORIES : 
