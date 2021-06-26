@@ -14,14 +14,16 @@ export class App extends Component {
     return (
       <div>
         <Router>
+          <Header />
           <Switch>
-            <Route path="/">
+            <Route exact path="/">
               <Main />
             </Route>
-            <Route path="/about">
+            <Route exact path="/about">
               <About />
             </Route>
           </Switch>
+    
         </Router>
       </div>
     )
