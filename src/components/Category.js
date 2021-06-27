@@ -1,50 +1,45 @@
 import React, { Component } from "react";
 import Card from "react-bootstrap/Card";
-
 export class category extends Component {
   render() {
     return (
       <div>
-        <Card>
-          <Card.Img variant="top" src="holder.js/100px160" />
+        <h1 id="h1Category">CATEGORY</h1>
+        <hr id="hr-image"></hr>
+        <div class="input-group" id="searchInput">
+          <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+            aria-describedby="search-addon"/>
+          <button type="button" class="btn btn-outline-primary">search</button>
+        </div>
+        <Card style={{ width: '18rem' }}>
+          <Card.Img variant="top" src="https://elforsan.net/uploads/videos/image_preview/607d530fa43a3.png" />
           <Card.Body>
-            <Card.Title>Card title</Card.Title>
+            <Card.Title>Card Title</Card.Title>
             <Card.Text>
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
+              Some quick example text to build on the card title and make up the bulk of
+              the card's content.
             </Card.Text>
           </Card.Body>
-          <Card.Footer>
-            <small className="text-muted">Last updated 3 mins ago</small>
-          </Card.Footer>
         </Card>
-        <Card>
-          <Card.Img variant="top" src="holder.js/100px160" />
+        <Card style={{ width: '18rem' }}>
+          <Card.Img variant="top" src="https://elforsan.net/uploads/videos/image_preview/607d530fa43a3.png" />
           <Card.Body>
-            <Card.Title>Card title</Card.Title>
+            <Card.Title>Card Title</Card.Title>
             <Card.Text>
-              This card has supporting text below as a natural lead-in to
-              additional content.{" "}
+              Some quick example text to build on the card title and make up the bulk of
+              the card's content.
             </Card.Text>
           </Card.Body>
-          <Card.Footer>
-            <small className="text-muted">Last updated 3 mins ago</small>
-          </Card.Footer>
         </Card>
-        <Card>
-          <Card.Img variant="top" src="holder.js/100px160" />
+        <Card style={{ width: '18rem' }}>
+          <Card.Img variant="top" src="https://elforsan.net/uploads/videos/image_preview/607d530fa43a3.png" />
           <Card.Body>
-            <Card.Title>Card title</Card.Title>
+            <Card.Title>Card Title</Card.Title>
             <Card.Text>
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This card has even longer content
-              than the first to show that equal height action.
+              Some quick example text to build on the card title and make up the bulk of
+              the card's content.
             </Card.Text>
           </Card.Body>
-          <Card.Footer>
-            <small className="text-muted">Last updated 3 mins ago</small>
-          </Card.Footer>
         </Card>
       </div>
     );

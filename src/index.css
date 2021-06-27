@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Piedra&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@700&display=swap");
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -15,6 +16,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
 /************************************************************************/
 .nav {
   display: flex;
@@ -57,6 +59,7 @@ code {
   padding-bottom: 10px;
   padding-top: 20px;
 }
+
 /* .nav :hover {
   color: #c06014;
   text-decoration: none;
@@ -124,6 +127,7 @@ code {
   filter: blur(8px);
   -webkit-filter: blur(8px);
 }
+
 /* 
 .carousel-item :hover {
   width: 1500px;
@@ -189,4 +193,28 @@ code {
 .logo {
   height: 139px;
   width: 160px;
+}
+
+/*************************************** Category.js *******************************/
+#h1Category {
+  text-align: center;
+  margin: 4%;
+  margin-bottom: 2%;
+  display: block;
+}
+
+#hr-image {
+  display: block;
+  background-image: url(https://raw.githubusercontent.com/LTUC/amman-201d22/main/class-10/lab-a/lab-assets/hr-img.png);
+  border: 0px;
+  height: 15px;
+  width: 100%;
+  margin-bottom: 4%;
+}
+
+#searchInput {
+  width: 70%;
+  margin-left: 25%;
+  margin-bottom: 5%;
+
 }

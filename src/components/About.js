@@ -85,7 +85,9 @@ export class About extends Component {
               </Card>
             </Col>
           </Row>
+          
         </div>
+
       </div>
     );
   }
