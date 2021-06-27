@@ -47,6 +47,7 @@ export class category extends Component {
           </Card.Body>
         </Card>
       </div>
+      
     );
   }
 }
