@@ -1,13 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Piedra&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@700&display=swap");
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* width: 95%;
+  padding-left: 5%; */
+  font-size: 20px;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+/************************************************************************/
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 5%;
+  margin-bottom: 0;
+  list-style: none;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: "Arima Madurai", cursive;
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+
+.nav1 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 29%;
+  margin-bottom: 0;
+  list-style: none;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: "Arima Madurai", cursive;
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+
+.nav2 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 5%;
+  margin-bottom: 0;
+  list-style: none;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: "Arima Madurai", cursive;
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+/* .nav :hover {
+  color: #c06014;
+  text-decoration: none;
+} */
+/************************************************************************/
+
+.bio {
+  color: rgb(102, 66, 13);
+  text-align: center;
+  padding-top: 5%;
+  font-family: "Castoro", serif;
+}
+
+.bio2 {
+  margin-left: 25%;
+  text-align: center;
+  padding-top: 3%;
+  font-size: 20px;
+  width: 50%;
+  font-family: "Arima Madurai", cursive;
+  line-height: 47px;
+}
+
+.foodiesCategories {
+  font-size: 30px;
+  color: #c06014;
+  font-family: "Arima Madurai", cursive;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.header2 {
+  background-color: #d9bf77;
+  height: 40%;
+}
+
+.carousel-item {
+  height: 600px;
+}
+
+.heroText {
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+}
+
+.heroText1 {
+  font-size: 30px;
+  color: rgba(2, 2, 2, 0.692);
+  font-family: "Arima Madurai", cursive;
+  position: absolute;
+  top: 60px;
+  left: 524px;
+  left: 587px;
+}
+
+.heroText2 {
+  font-size: 100px;
+  color: #b6d6b2;
+  font-family: "Piedra", cursive;
+  text-shadow: 0 0 3px #ffffff, 0 0 5px #4d4d5a;
+}
+
+.pic {
+  width: 1500px;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+/* 
+.carousel-item :hover {
+  width: 1500px;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+} */
+
+.animate__fadeInDown {
+  font-size: 100px;
+  color: #434b43;
+  font-family: "Piedra", cursive;
+  padding-top: 100px;
+}
+
+.animate__flipInX {
+  font-size: 60px;
+  color: #c06014;
+  font-family: "Arima Madurai", cursive;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.dine {
+  font-size: 30px;
+  color: #d44949;
+  font-family: "Arima Madurai", cursive;
+}
+
+.dine2 {
+  font-size: 30px;
+  font-family: "Arima Madurai", cursive;
+  color: #e2d5d5;
+}
+
+.img-thumbnail {
+  padding: 0.25rem;
+  background-color: #fff;
+  border: 6px solid #dee2e6;
+  border-radius: 13.25rem;
+  max-width: 100%;
+  height: auto;
+}
+
+.category-container {
+  background-color: #c06014;
+}
+
+.categoryImages {
+  background-color: #b6d6b2;
+}
+
+.categoryImages-text {
+  position: absolute;
+  top: 160px;
+  left: 245px;
+  width: 100%;
+  font-size: 45px;
+  color: #0c0202;
+  font-family: "Arima Madurai", cursive;
+}
+
+/******************************************/
+.logo {
+  height: 139px;
+  width: 160px;
+}
+
+
+/*************************************** Category.js *******************************/
+
+#h1Category{
+  text-align: center;
+  margin: 4%;
+  margin-bottom: 2%;
+  display: block;
+
+}
+
+
+#hr-image {
+  display: block;
+  background-image: url(https://raw.githubusercontent.com/LTUC/amman-201d22/main/class-10/lab-a/lab-assets/hr-img.png);
+  border: 0px; 
+  height: 15px;
+  width: 100%;
+  
+  margin-bottom: 4%;
+}
+
+#searchInput{
+  width: 70%;
+ margin-left: 25%;
+ margin-bottom: 5%;
+}
+
+.cardsStyling{
+  display: inline-block;
 }
