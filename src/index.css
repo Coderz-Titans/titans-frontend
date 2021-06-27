@@ -1,15 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Piedra&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap');
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* width: 95%;
-  padding-left: 5%; */
-  font-size: 20px;
-}
+   /* width: 100%;  */
+  /* padding-left: 5%;  */
+  /* font-size: 20px; */
+  /* background-image: ; */
+  width: 100%;
+  height: 100%;
+ }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -77,15 +82,21 @@ code {
   font-size: 20px;
   width: 50%;
   font-family: "Arima Madurai", cursive;
+  font-weight: bolder;
   line-height: 47px;
 }
 
 .foodiesCategories {
-  font-size: 30px;
+  font-size: 40px;
   color: #c06014;
   font-family: "Arima Madurai", cursive;
+  font-weight: bolder;
+  /* font-family: 'Akaya Kanadaka', cursive; */
+  /* font-family: 'Merriweather', serif;   */
+  /* font-family: 'Merriweather', serif; */
   text-align: center;
   padding-top: 100px;
+  border-radius: 35px;
 }
 
 .header2 {
@@ -141,7 +152,9 @@ code {
 .animate__flipInX {
   font-size: 60px;
   color: #c06014;
-  font-family: "Arima Madurai", cursive;
+  font-weight: bolder;
+  font-family: 'Akaya Kanadaka', cursive;
+  /* font-family: "Arima Madurai", cursive; */
   text-align: center;
   padding-top: 100px;
 }
@@ -167,15 +180,20 @@ code {
   height: auto;
 }
 
-.category-container {
+/* .category-container {
   background-color: #c06014;
-}
+} */
 
-.categoryImages {
+/* .categoryImages {
   background-color: #b6d6b2;
-}
+  width: 200px;
+  position: relative;
+  text-align: center;
+  color: black;
+  border-radius: 35px;
+}  */
 
-.categoryImages-text {
+/* .categoryImages-text {
   position: absolute;
   top: 160px;
   left: 245px;
@@ -183,10 +201,101 @@ code {
   font-size: 45px;
   color: #0c0202;
   font-family: "Arima Madurai", cursive;
-}
+} */
 
 /******************************************/
 .logo {
   height: 139px;
   width: 160px;
+}
+
+/*****************************************/
+
+/*************************************/
+.categoryImg {
+  width: 300px;
+  height: 200px;
+  border-radius: 35px;
+}
+
+/**********footer*************************/
+.footer {
+  text-align: center;
+  clear: both;
+  margin-top: 30%;
+  height: 10%;
+
+}
+
+/*******catogery style************************/
+.cards {
+  width: 1000px;
+  display: flex;
+  position: absolute;
+  left: -60px;
+  margin-left: 40px;
+}
+.cards img {
+  width: 280px;
+  height: 330px;
+  border-radius: 35px;
+  border: 1px solid #33073169;
+  margin: 23px;
+  margin-top: 50px;
+}
+
+.container {
+  position: relative;
+  width: 50%;
+}
+/* 
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 35px;
+
+} */
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 38px;
+  right: 0;
+  width: 280px;
+  height: 330px;
+  opacity: 0;
+  margin-top: 50px;
+  transition: .5s ease;
+  border-radius: 50%;
+  background-color: #F4C7AB;
+  text-align: left;
+}
+
+.container:hover .overlay {
+  opacity: 0.8;
+}
+
+.text {
+  color: black;
+  font-size: 50px;
+  font-weight: bolder;
+  font-family: 'Akaya Kanadaka', cursive;
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  text-indent: -10px;
+}
+
+.categoryImg{
+  border-radius: 50%;
+}
+/***************************/
+#root{
+width: 100%;
 }
