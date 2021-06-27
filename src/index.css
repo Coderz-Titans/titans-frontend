@@ -190,30 +190,3 @@ code {
   height: 139px;
   width: 160px;
 }
-
-
-/*************************************** Category.js *******************************/
-
-#h1Category{
-  text-align: center;
-  margin: 4%;
-  margin-bottom: 2%;
-  display: block;
-
-}
-
-
-#hr-image {
-  display: block;
-  background-image: url(https://raw.githubusercontent.com/LTUC/amman-201d22/main/class-10/lab-a/lab-assets/hr-img.png);
-  border: 0px; 
-  height: 15px;
-  width: 100%;
-  margin-bottom: 4%;
-}
-
-#searchInput{
-  width: 70%;
- margin-left: 25%;
- margin-bottom: 5%;
-}
