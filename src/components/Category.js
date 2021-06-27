@@ -12,12 +12,18 @@ export class category extends Component {
 
     this.state = {
       show: false,
+      heartNumber: 0,
     }
   }
 
   functionl = () => {
     this.setState({
       show: true,
+    })
+  }
+  heartRate = () => {
+    this.setState({
+      heartNumber: this.state.heartNumber + 1,
     })
   }
 
@@ -76,6 +82,26 @@ export class category extends Component {
                 <Card.Text>
                   Some quick example text to build on the card title and make up the
                   bulk of the card's content.
+                  <br></br>
+                  <p onClick={this.heartRate} class="heartRate">❤️ = {this.state.heartNumber}</p>
+                </Card.Text>
+
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col xs={6} md={4}>
+            <Card style={{ width: "18rem" }}>
+              <Card.Img
+                variant="top"
+                src="https://elforsan.net/uploads/videos/image_preview/607d530fa43a3.png"
+              />
+              <Card.Body>
+                <Card.Title>Card Title</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up the
+                  bulk of the card's content.
+                  <br></br>
+                  <p onClick={this.heartRate} class="heartRate">❤️ = {this.state.heartNumber}</p>
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -91,26 +117,13 @@ export class category extends Component {
                 <Card.Text>
                   Some quick example text to build on the card title and make up the
                   bulk of the card's content.
+                  <br></br>
+                  <p onClick={this.heartRate} class="heartRate">❤️ = {this.state.heartNumber}</p>
                 </Card.Text>
               </Card.Body>
             </Card>
           </Col>
-          <Col xs={6} md={4}>
-            <Card style={{ width: "18rem" }}>
-              <Card.Img
-                variant="top"
-                src="https://elforsan.net/uploads/videos/image_preview/607d530fa43a3.png"
-              />
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          
+
         </Row>
       </div>
     );
