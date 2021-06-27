@@ -45,4 +45,5 @@ export class category extends Component {
     );
   }
 }
+
 export default category;
