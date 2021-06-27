@@ -200,7 +200,7 @@ code {
 .footer{
   text-align: center;
   clear: both;
-  margin-top: 50%;
+  margin-top: 90%;
   }
 
 #h1Category {
@@ -246,5 +246,8 @@ margin-top: 25%;
   position: absolute;
   margin-top: 25%;
   width: 10%;
-  
+}
+
+.heartRate{
+  display: inline-block;
 }
