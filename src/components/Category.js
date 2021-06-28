@@ -56,7 +56,7 @@ export class category extends Component {
               <Card style={{ width: "18rem" }}>
                 <Card.Img
                   variant="top"
-                  src="https://elforsan.net/uploads/videos/image_preview/607d530fa43a3.png"
+                  src="https://blog.amigofoods.com/wp-content/uploads/2020/07/costa-rican-breakfast-foods.jpg"
                 />
                 <Card.Body>
                   <Card.Title>Card Title</Card.Title>
@@ -75,7 +75,7 @@ export class category extends Component {
             <Card style={{ width: "18rem" }} onSubmit={this.function}>
               <Card.Img
                 variant="top"
-                src="https://elforsan.net/uploads/videos/image_preview/607d530fa43a3.png"
+                src="https://blog.amigofoods.com/wp-content/uploads/2020/07/costa-rican-breakfast-foods.jpg"
               />
               <Card.Body>
                 <Card.Title>Card Title</Card.Title>
@@ -93,7 +93,7 @@ export class category extends Component {
             <Card style={{ width: "18rem" }}>
               <Card.Img
                 variant="top"
-                src="https://elforsan.net/uploads/videos/image_preview/607d530fa43a3.png"
+                src="https://blog.amigofoods.com/wp-content/uploads/2020/07/costa-rican-breakfast-foods.jpg"
               />
               <Card.Body>
                 <Card.Title>Card Title</Card.Title>
@@ -110,7 +110,7 @@ export class category extends Component {
             <Card style={{ width: "18rem" }}>
               <Card.Img
                 variant="top"
-                src="https://elforsan.net/uploads/videos/image_preview/607d530fa43a3.png"
+                src="https://blog.amigofoods.com/wp-content/uploads/2020/07/costa-rican-breakfast-foods.jpg"
               />
               <Card.Body>
                 <Card.Title>Card Title</Card.Title>

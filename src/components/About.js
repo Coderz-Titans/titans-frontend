@@ -1,91 +1,187 @@
 import React, { Component } from "react";
-import Card from "react-bootstrap/Card";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-export class About extends Component {
+import abbadi from "../images/abbadi.jpg";
+import abed from "../images/abed.jpg";
+import ayyoub from "../images/ayyoub.jpg";
+import sanabel from "../images/sanabel.jpg";
+import ibrahim from "../images/ibrahim.jpg";
+import latifa from "../images/latifa.png";
+import { AiFillGithub } from "react-icons/ai";
+import { AiFillLinkedin } from "react-icons/ai";
+import { FaFacebookF } from "react-icons/fa";
+
+export class Test extends Component {
   render() {
     return (
-      <div>
-        <h2>TITANS</h2>
-        <p>This site created by student </p>
-
+      <div className="icons-position1">
         <div>
-          <h1>OUR TEAM :</h1>
-          <Row>
-            <Col xs={6} md={4}>
-              <Card style={{ width: "18rem" }}>
-                <Card.Img variant="top" src="holder.js/100px180" />
-                <Card.Body>
-                  <Card.Title>Abdallah Alabed</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={6} md={4}>
-              <Card style={{ width: "18rem" }}>
-                <Card.Img variant="top" src="holder.js/100px180" />
-                <Card.Body>
-                  <Card.Title>Abdullah Alabbadi</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={6} md={4}>
-              <Card style={{ width: "18rem" }}>
-                <Card.Img variant="top" src="holder.js/100px180" />
-                <Card.Body>
-                  <Card.Title>Ayyoub Al Keyyam</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={6} md={4}>
-              <Card style={{ width: "18rem" }}>
-                <Card.Img variant="top" src="holder.js/100px180" />
-                <Card.Body>
-                  <Card.Title>Ibrahim Alhamshari</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={6} md={4}>
-              <Card style={{ width: "18rem" }}>
-                <Card.Img variant="top" src="holder.js/100px180" />
-                <Card.Body>
-                  <Card.Title>Latifa Amaireh</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={6} md={4}>
-              <Card style={{ width: "18rem" }}>
-                <Card.Img variant="top" src="holder.js/100px180" />
-                <Card.Body>
-                  <Card.Title>Sanabel Abu Ezbead</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-          
+          <h1 class="animate__animated animate__slideInUp">OUR TEAM</h1>
+        </div>
+        <head>
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+          />
+        </head>
+        <div id="cards_landscape_wrap-2">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <div class="card-flyer">
+                  <div class="text-box">
+                    <div class="image-box">
+                      <img src={abbadi} alt="" />
+                    </div>
+                    <div class="text-container">
+                      <h6>Abdullah Alabbadi</h6>
+                      <h1>Software developer</h1>
+                      <br></br>
+                      <div>
+                        <a href="https://github.com/Abdullah-Alabbadi">
+                          <AiFillGithub size="1.7em" color="#3d84b8" />
+                        </a>
+                        <a href="https://github.com/Abdullah-Alabbadi">
+                          <AiFillLinkedin size="1.7em" color="#3d84b8" />
+                        </a>
+                        <a href="https://github.com/Abdullah-Alabbadi">
+                          <FaFacebookF size="1.46em" color="#3d84b8" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <div class="card-flyer">
+                  <div class="text-box">
+                    <div class="image-box">
+                      <img src={abed} alt="" />
+                    </div>
+                    <div class="text-container">
+                      <h6>Abdallah Alabed</h6>
+                      <h1>Software developer</h1>
+                      <br></br>
+                      <div>
+                        <a href="https://github.com/abdallahAlabed">
+                          <AiFillGithub size="1.7em" color="#3d84b8" />
+                        </a>
+                        <a href="https://github.com/abdallahAlabed">
+                          <AiFillLinkedin size="1.7em" color="#3d84b8" />
+                        </a>
+                        <a href="https://github.com/abdallahAlabed">
+                          <FaFacebookF size="1.46em" color="#3d84b8" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <div class="card-flyer">
+                  <div class="text-box">
+                    <div class="image-box">
+                      <img src={ayyoub} alt="" />
+                    </div>
+
+                    <div class="text-container">
+                      <h6>Ayyoub Al Keyyam</h6>
+                      <h1>Software developer</h1>
+                      <br></br>
+                      <div className="icons-position1">
+                        <a href="https://github.com/ayyoubk">
+                          <AiFillGithub size="1.7em" color="#3d84b8" />
+                        </a>
+                        <a href="https://github.com/ayyoubk">
+                          <AiFillLinkedin size="1.7em" color="#3d84b8" />
+                        </a>
+                        <a href="https://github.com/ayyoubk">
+                          <FaFacebookF size="1.46em" color="#3d84b8" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row justify-content-center">
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <div class="card-flyer">
+                  <div class="text-box">
+                    <div class="image-box">
+                      <img src={sanabel} alt="" />
+                    </div>
+                    <div class="text-container">
+                      <h6>Sanabel Abu Ezbead</h6>
+                      <h1>Software developer</h1>
+                      <br></br>
+                      <div>
+                        <a href="https://github.com/Sanabel8">
+                          <AiFillGithub size="1.7em" color="#3d84b8" />
+                        </a>
+                        <a href="https://github.com/Sanabel8">
+                          <AiFillLinkedin size="1.7em" color="#3d84b8" />
+                        </a>
+                        <a href="https://github.com/Sanabel8">
+                          <FaFacebookF size="1.46em" color="#3d84b8" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <div class="card-flyer">
+                  <div class="text-box">
+                    <div class="image-box">
+                      <img src={ibrahim} alt="" />
+                    </div>
+                    <div class="text-container">
+                      <h6>Ibrahim Alhamshari</h6>
+                      <h1>Software developer</h1>
+                      <br></br>
+                      <div>
+                        <a href="https://github.com/ibrahim-alhamshari">
+                          <AiFillGithub size="1.7em" color="#3d84b8" />
+                        </a>
+                        <a href="https://github.com/ibrahim-alhamshari">
+                          <AiFillLinkedin size="1.7em" color="#3d84b8" />
+                        </a>
+                        <a href="https://github.com/ibrahim-alhamshari">
+                          <FaFacebookF size="1.46em" color="#3d84b8" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <div class="card-flyer">
+                  <div class="text-box">
+                    <div class="image-box">
+                      <img src={latifa} alt="" />
+                    </div>
+
+                    <div class="text-container">
+                      <h6>Latifa Amaireh</h6>
+                      <h1>Software developer</h1>
+                      <br></br>
+                      <div>
+                        <a href="https://github.com/latifaghassan">
+                          <AiFillGithub size="1.7em" color="#3d84b8" />
+                        </a>
+                        <a href="https://github.com/latifaghassan">
+                          <AiFillLinkedin size="1.7em" color="#3d84b8" />
+                        </a>
+                        <a href="https://github.com/latifaghassan">
+                          <FaFacebookF size="1.46em" color="#3d84b8" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -93,4 +189,4 @@ export class About extends Component {
   }
 }
 
-export default About;
+export default Test;
