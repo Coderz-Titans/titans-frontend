@@ -3,12 +3,19 @@ import Carousel from "react-bootstrap/Carousel";
 import Image from "react-bootstrap/Image";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import { Link } from "react-router-dom";
 
 import hero1 from "../images/hero1.jpg";
 import hero2 from "../images/hero2.jpg";
 import hero3 from "../images/hero3.jpg";
 import hero4 from "../images/hero4.jpg";
 import hero5 from "../images/hero5.jpg";
+import drinks from "../images/drink.jpg";
+import lunch from "../images/lunch.jpg";
+import snacks from "../images/snacks.jpg";
+import dessert from "../images/dessert.jpg";
+import viewall from "../images/viewall.jpg";
+import breakfast from "../images/breakfast.jpg";
 
 export class Home extends Component {
   render() {
@@ -90,38 +97,139 @@ export class Home extends Component {
         </div>
         <div>
           <h2 className="foodiesCategories"> FOODIES CATEGORIES</h2>
-          {/* <img
-            className="pic"
-            src="https://images.unsplash.com/photo-1578435570165-1e7d7a207700?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-          ></img> */}
-          <div>
-            <Row>
-              <Col xs={6} md={4}>
-                <Image className="categoryImages" src={hero1} thumbnail />
-                <h2 className="categoryImages-text">BREAKFAST</h2>
-              </Col>
-              <Col xs={6} md={4}>
-                <Image className="categoryImages" src={hero1} thumbnail />
-                <h2 className="categoryImages-text">LUNCH</h2>
-              </Col>
-              <Col xs={6} md={4}>
-                <Image className="categoryImages" src={hero2} thumbnail />
-                <h2 className="categoryImages-text">DESERT</h2>
-              </Col>
-              <Col xs={6} md={4}>
-                <Image className="categoryImages" src={hero1} thumbnail />
-                <h2 className="categoryImages-text">DRINKS</h2>
-              </Col>
-              <Col xs={6} md={4}>
-                <Image className="categoryImages" src={hero1} thumbnail />
-                <h2 className="categoryImages-text">SNACKS</h2>
-              </Col>
-              <Col xs={6} md={4}>
-                <Image className="categoryImages" src={hero1} thumbnail />
-                <h2 className="categoryImages-text">VIEW ALL</h2>
-              </Col>
-            </Row>
-          </div>
+          <Row>
+            {
+                <div class="cards">
+                  <div class="container">
+                    <a href="/category">
+                      <Image
+                        className="categoryImg"
+                        src={breakfast}
+                        roundedCircle
+                      />
+
+                      <div class="overlay">
+                        <div class="text">BREACKFAST</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+            }
+            {
+                <div class="cards">
+                  <div class="container">
+                    <a href="/category">
+                      <Image
+                        className="categoryImg"
+                        src={lunch}
+                        roundedCircle
+                      />
+                      <div class="overlay">
+                        <div class="text">LUNCH</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+            }
+
+            {
+                <div class="cards">
+                  <div class="container">
+                    <a href="/category">
+                      <Image
+                        className="categoryImg"
+                        src={dessert}
+                        roundedCircle
+                      />
+                      <div class="overlay">
+                        <div class="text">DESSERT</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+            }
+            {
+              <div class="cards">
+                <div class="container">
+                  <a href="/category">
+                    <Image className="categoryImg" src={drinks} roundedCircle />
+                    <div class="overlay">
+                      <div class="text">DRINKS</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            }
+
+            {
+                <div class="cards">
+                  <div class="container">
+                    <a href="products.html">
+                      <Image
+                        className="categoryImg"
+                        src={snacks}
+                        roundedCircle
+                      />
+                      <div class="overlay">
+                        <div class="text">SNACKS</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+            }
+            {
+                <div class="cards">
+                  <div class="container">
+                    <a href="products.html">
+                      <Image
+                        className="categoryImg"
+                        src={viewall}
+                        roundedCircle
+                      />
+                      <div class="overlay">
+                        <div class="text">VIEW ALL</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+            }
+            {
+
+                <div class="cards">
+                  <div class="container">
+                    <a href="products.html">
+                      <Image
+                        className="categoryImg"
+                        src={viewall}
+                        roundedCircle
+                      />
+                      <div class="overlay">
+                        <div class="text">VIEW ALL</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+            }
+            {
+
+                <div class="cards">
+                  <div class="container">
+                    <a href="products.html">
+                      <Image
+                        className="categoryImg"
+                        src={viewall}
+                        roundedCircle
+                      />
+                      <div class="overlay">
+                        <div class="text">VIEW ALL</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+            }
+          </Row>
         </div>
       </div>
     );
