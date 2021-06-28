@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Piedra&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap');
+
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -7,17 +8,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* width: 95%;
-  padding-left: 5%; */
-  font-size: 20px;
-}
+  width: 100%;
+  height: 100%;
+ }
+
+/************************************* Start Main.js **********************************************/
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-/************************************************************************/
 .nav {
   display: flex;
   flex-wrap: wrap;
@@ -35,7 +36,7 @@ code {
 .nav1 {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 29%;
+  margin-left: 10%;
   margin-bottom: 0;
   list-style: none;
   color: #ffffff;
@@ -60,12 +61,6 @@ code {
   padding-top: 20px;
 }
 
-/* .nav :hover {
-  color: #c06014;
-  text-decoration: none;
-} */
-/************************************************************************/
-
 .bio {
   color: rgb(102, 66, 13);
   text-align: center;
@@ -80,15 +75,20 @@ code {
   font-size: 20px;
   width: 50%;
   font-family: "Arima Madurai", cursive;
+  font-weight: bolder;
   line-height: 47px;
 }
 
 .foodiesCategories {
-  font-size: 30px;
+  position: relative;
+  font-size: 40px;
   color: #c06014;
   font-family: "Arima Madurai", cursive;
+  font-weight: bolder;
   text-align: center;
   padding-top: 100px;
+  border-radius: 35px;
+  margin-bottom: 3%;
 }
 
 .header2 {
@@ -128,12 +128,6 @@ code {
   -webkit-filter: blur(8px);
 }
 
-/* 
-.carousel-item :hover {
-  width: 1500px;
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
-} */
 
 .animate__fadeInDown {
   font-size: 100px;
@@ -145,7 +139,8 @@ code {
 .animate__flipInX {
   font-size: 60px;
   color: #c06014;
-  font-family: "Arima Madurai", cursive;
+  font-weight: bolder;
+  font-family: 'Akaya Kanadaka', cursive;
   text-align: center;
   padding-top: 100px;
 }
@@ -171,36 +166,85 @@ code {
   height: auto;
 }
 
-.category-container {
-  background-color: #c06014;
-}
-
-.categoryImages {
-  background-color: #b6d6b2;
-}
-
-.categoryImages-text {
-  position: absolute;
-  top: 160px;
-  left: 245px;
-  width: 100%;
-  font-size: 45px;
-  color: #0c0202;
-  font-family: "Arima Madurai", cursive;
-}
-
-/******************************************/
 .logo {
   height: 139px;
   width: 160px;
 }
 
-/*************************************** Category.js *******************************/
+.cards {
+  /* width: 1000px; */
+  display:flex;
+  /* position: absolute; */
+  left: -60px;
+}
+.cards img {
+  text-align: center;
+  height:70%;
+  border-radius: 25px;
+  border: 1px solid #33073169;
+  margin: 1%;
+  margin-top: 3%;
+  margin-left: 40%;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 38px;
+  right: 0;
+  width: 20%;
+  height: 330px;
+  opacity: 0;
+  margin-top: 50px;
+  transition: .5s ease;
+  border-radius: 50%;
+  background-color:black;
+  text-align: left;
+}
+
+.container:hover .overlay {
+  opacity: 0.8;
+}
+
+.text {
+  color: black;
+  font-size: 50px;
+  font-weight: bolder;
+  font-family: 'Akaya Kanadaka', cursive;
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  text-indent: -10px;
+}
+
+.categoryImg{
+  border-radius: 50%;
+}
+#root{
+width: 100%;
+}
+
+.categoryImg {
+  width: 300px;
+  height: 200px;
+  border-radius: 35px;
+}
+
+/************************************* End Main.js **********************************************/
+
+
+/********************************************* Start Category.js **************************************/
 
 .footer{
   text-align: center;
   clear: both;
-  margin-top: 50%;
+  margin-top: 90%;
   }
 
 #h1Category {
@@ -223,7 +267,6 @@ margin-left: 40%;
   width: 70%;
   margin-left: 25%;
   margin-bottom: 5%;
-
 }
 .row{
   position: relative;
@@ -246,5 +289,162 @@ margin-top: 25%;
   position: absolute;
   margin-top: 25%;
   width: 10%;
-  
+}
+
+.heartRate{
+  display: inline-block;
+}
+
+/********************************************* End Category.js **************************************/
+
+
+
+/******************************************* Start AboutUs .js***************************************************/
+
+.animate__slideInUp {
+  font-size: 54px;
+  color: #434b43;
+  font-family: "Arima Madurai", cursive;
+  padding-top: 100px;
+  margin-left: 43%;
+}
+
+#cards_landscape_wrap-2 {
+  text-align: center;
+}
+#cards_landscape_wrap-2 .container {
+  padding-bottom: 100px;
+}
+#cards_landscape_wrap-2 a {
+  text-decoration: none;
+  outline: none;
+  color: #2b2ace;
+}
+#cards_landscape_wrap-2 .card-flyer {
+  border-radius: 5px;
+}
+#cards_landscape_wrap-2 .card-flyer .image-box {
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+#cards_landscape_wrap-2 .card-flyer .image-box img {
+  transition: all 0.9s ease;
+  transition: all 0.9s ease;
+  transition: all 0.9s ease;
+  transition: all 0.9s ease;
+  width: 100%;
+  height: 200px;
+}
+#cards_landscape_wrap-2 .card-flyer:hover .image-box img {
+  opacity: 0.7;
+  -webkit-transform: scale(1.15);
+  -moz-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  -o-transform: scale(1.15);
+  transform: scale(1.15);
+}
+
+#cards_landscape_wrap-2 .card-flyer .text-box .text-container {
+  padding: 30px 18px;
+}
+
+#cards_landscape_wrap-2 .card-flyer .text-box h1 {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #1a1919;
+}
+/******************************************* End AboutUs .js***************************************************/
+
+/********************************footer*************************/
+/* .footer {
+  text-align: center;
+  clear: both;
+  margin-top: 30%;
+  height: 10%;
+
+} */
+
+/****************************************** Start Profile.js ***************************************************/
+
+#profileImages{
+  position: relative;
+}
+
+#coverImage{
+  position: absolute;
+  width: 90%;
+  margin-top: 5%;
+  margin-left: 5%;
+  border-radius: 20px;
+}
+
+#userImage{
+  position: absolute;
+  width: 24%;
+  margin-top: 10%;
+  border-radius: 200px;
+  margin-left: 6%;
+}
+
+#text{
+  position: absolute;
+  margin-top: 18%;
+  width: 20%;
+  margin-left: 33%;
+  background-color: black;
+  border-radius: 20px;
+  color: #dee2e6;
+  opacity: 0.7;
+}
+#buttonId{
+  position: absolute;
+  margin-top: 33%;
+  border-radius: 20px;
+  background-color: #47597E;
+  width: 12%;
+  margin-left: 80%;
+}
+
+#fixImage{
+  position: absolute;
+  margin-top: 6%;
+  border-radius: 20px;
+  width: 4%;
+  margin-left: 90%;
+}
+
+
+#section2{
+margin-top: 40%;
+margin-left: 10%;
+position:absolute;
+
+}
+
+#text2{
+
+  margin-left: 5%;
+}
+
+#buttonId2{
+  position: absolute;
+  margin-top: -9%;
+  border-radius: 20px;
+  background-color: #293B5F;
+  width:18%;
+  margin-left: 108%;
+  padding-right: 3%;
+}
+
+
+#section3{
+  /* border: 1px dashed #000; width: 50%; margin: auto; margin-top: 5%; margin-bottom: 5%; */
+  margin-top: 55%;
+margin-left: 7%;
+position:absolute;
 }
