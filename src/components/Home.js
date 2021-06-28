@@ -99,7 +99,6 @@ export class Home extends Component {
           <h2 className="foodiesCategories"> FOODIES CATEGORIES</h2>
           <Row>
             {
-              <Col xs={6} md={2}>
                 <div class="cards">
                   <div class="container">
                     <a href="/category">
@@ -115,10 +114,8 @@ export class Home extends Component {
                     </a>
                   </div>
                 </div>
-              </Col>
             }
             {
-              <Col xs={4} md={2}>
                 <div class="cards">
                   <div class="container">
                     <a href="/category">
@@ -133,11 +130,9 @@ export class Home extends Component {
                     </a>
                   </div>
                 </div>
-              </Col>
             }
 
             {
-              <Col xs={6} md={2}>
                 <div class="cards">
                   <div class="container">
                     <a href="/category">
@@ -152,29 +147,21 @@ export class Home extends Component {
                     </a>
                   </div>
                 </div>
-              </Col>
             }
             {
-              <Col xs={6} md={2}>
-                <div class="cards">
-                  <div class="container">
-                    <a href="/category">
-                      <Image
-                        className="categoryImg"
-                        src={drinks}
-                        roundedCircle
-                      />
-                      <div class="overlay">
-                        <div class="text">DRINKS</div>
-                      </div>
-                    </a>
-                  </div>
+              <div class="cards">
+                <div class="container">
+                  <a href="/category">
+                    <Image className="categoryImg" src={drinks} roundedCircle />
+                    <div class="overlay">
+                      <div class="text">DRINKS</div>
+                    </div>
+                  </a>
                 </div>
-              </Col>
+              </div>
             }
 
             {
-              <Col xs={6} md={2}>
                 <div class="cards">
                   <div class="container">
                     <a href="products.html">
@@ -189,10 +176,8 @@ export class Home extends Component {
                     </a>
                   </div>
                 </div>
-              </Col>
             }
             {
-              <Col xs={6} md={2}>
                 <div class="cards">
                   <div class="container">
                     <a href="products.html">
@@ -207,28 +192,9 @@ export class Home extends Component {
                     </a>
                   </div>
                 </div>
-              </Col>
-            }
-            {/* {
-              <Col xs={6} md={2}>
-                <div class="cards">
-                  <div class="container">
-                    <a href="products.html">
-                      <Image
-                        className="categoryImg"
-                        src={viewall}
-                        roundedCircle
-                      />
-                      <div class="overlay">
-                        <div class="text">VIEW ALL</div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </Col>
             }
             {
-              <Col xs={6} md={2}>
+
                 <div class="cards">
                   <div class="container">
                     <a href="products.html">
@@ -243,8 +209,26 @@ export class Home extends Component {
                     </a>
                   </div>
                 </div>
-              </Col>
-            } */}
+
+            }
+            {
+
+                <div class="cards">
+                  <div class="container">
+                    <a href="products.html">
+                      <Image
+                        className="categoryImg"
+                        src={viewall}
+                        roundedCircle
+                      />
+                      <div class="overlay">
+                        <div class="text">VIEW ALL</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+            }
           </Row>
         </div>
       </div>
