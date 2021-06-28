@@ -405,7 +405,7 @@ margin-top: 25%;
   position: absolute;
   margin-top: 33%;
   border-radius: 20px;
-  background-color: rgb(1, 245, 74);
+  background-color: #47597E;
   width: 12%;
   margin-left: 80%;
 }
@@ -416,4 +416,35 @@ margin-top: 25%;
   border-radius: 20px;
   width: 4%;
   margin-left: 90%;
+}
+
+
+#section2{
+margin-top: 40%;
+margin-left: 10%;
+position:absolute;
+
+}
+
+#text2{
+
+  margin-left: 5%;
+}
+
+#buttonId2{
+  position: absolute;
+  margin-top: -9%;
+  border-radius: 20px;
+  background-color: #293B5F;
+  width:18%;
+  margin-left: 108%;
+  padding-right: 3%;
+}
+
+
+#section3{
+  /* border: 1px dashed #000; width: 50%; margin: auto; margin-top: 5%; margin-bottom: 5%; */
+  margin-top: 55%;
+margin-left: 7%;
+position:absolute;
 }
