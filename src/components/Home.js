@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import Image from "react-bootstrap/Image";
-import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+
 
 import hero1 from "../images/hero1.jpg";
 import hero2 from "../images/hero2.jpg";
@@ -11,16 +11,44 @@ import hero3 from "../images/hero3.jpg";
 import hero4 from "../images/hero4.jpg";
 import hero5 from "../images/hero5.jpg";
 import drinks from "../images/drink.jpg";
-import lunch from "../images/lunch.jpg";
+import mainCourse from "../images/mainCourse.jpg";
 import snacks from "../images/snacks.jpg";
 import dessert from "../images/dessert.jpg";
 import viewall from "../images/viewall.jpg";
+import appetizer from "../images/appetizer.jpg";
+
 import breakfast from "../images/breakfast.jpg";
 
+// <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+// <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+
 export class Home extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      recipysData: [],
+      type: '',
+    }
+  }
+
+  chooseType = (value) => {
+  //  const amman = document.getElementById('BreakfastId').value
+    
+       console.log( 'value : ',value);
+    this.setState({
+      type:value,
+    })
+    console.log('type value : ' , this.state.type );
+  }
+
+  
+
   render() {
     return (
       <div>
+
         <div>
           <head>
             <link
@@ -99,61 +127,61 @@ export class Home extends Component {
           <h2 className="foodiesCategories"> FOODIES CATEGORIES</h2>
           <Row>
             {
-                <div class="cards">
-                  <div class="container">
-                    <a href="/category">
-                      <Image
-                        className="categoryImg"
-                        src={breakfast}
-                        roundedCircle
-                      />
+              <div class="cards"  value="breakfast" id="BreakfastId" onClick={()=>this.chooseType(document.getElementById('BreakfastId').getAttribute('value'))}>
+                <div class="container">
+                  {/* <a href="/category"> */}
+                    <Image
+                      className="categoryImg"
+                      src={breakfast}
+                      roundedCircle
+                    />
 
-                      <div class="overlay">
-                        <div class="text">BREACKFAST</div>
-                      </div>
-                    </a>
-                  </div>
+                    <div class="overlay1">
+                      <div class="text">BREAKFAST</div>
+                    </div>
+                  {/* </a> */}
                 </div>
+              </div>
             }
             {
-                <div class="cards">
-                  <div class="container">
-                    <a href="/category">
-                      <Image
-                        className="categoryImg"
-                        src={lunch}
-                        roundedCircle
-                      />
-                      <div class="overlay">
-                        <div class="text">LUNCH</div>
-                      </div>
-                    </a>
-                  </div>
+              <div class="cards">
+                <div class="container">
+                  <a href="/category">
+                    <Image
+                      className="categoryImg"
+                      src={mainCourse}
+                      roundedCircle
+                    />
+                    <div class="overlay1">
+                      <div class="text">MAIN COURSE</div>
+                    </div>
+                  </a>
                 </div>
+              </div>
             }
 
             {
-                <div class="cards">
-                  <div class="container">
-                    <a href="/category">
-                      <Image
-                        className="categoryImg"
-                        src={dessert}
-                        roundedCircle
-                      />
-                      <div class="overlay">
-                        <div class="text">DESSERT</div>
-                      </div>
-                    </a>
-                  </div>
+              <div class="cards">
+                <div class="container">
+                  <a href="/category">
+                    <Image
+                      className="categoryImg"
+                      src={dessert}
+                      roundedCircle
+                    />
+                    <div class="overlay1">
+                      <div class="text">DESSERT</div>
+                    </div>
+                  </a>
                 </div>
+              </div>
             }
             {
               <div class="cards">
                 <div class="container">
                   <a href="/category">
                     <Image className="categoryImg" src={drinks} roundedCircle />
-                    <div class="overlay">
+                    <div class="overlay1">
                       <div class="text">DRINKS</div>
                     </div>
                   </a>
@@ -162,71 +190,71 @@ export class Home extends Component {
             }
 
             {
-                <div class="cards">
-                  <div class="container">
-                    <a href="products.html">
-                      <Image
-                        className="categoryImg"
-                        src={snacks}
-                        roundedCircle
-                      />
-                      <div class="overlay">
-                        <div class="text">SNACKS</div>
-                      </div>
-                    </a>
-                  </div>
+              <div class="cards">
+                <div class="container">
+                  <a href="/category">
+                    <Image
+                      className="categoryImg"
+                      src={snacks}
+                      roundedCircle
+                    />
+                    <div class="overlay2">
+                      <div class="text">SNACKS</div>
+                    </div>
+                  </a>
                 </div>
+              </div>
             }
             {
-                <div class="cards">
-                  <div class="container">
-                    <a href="products.html">
-                      <Image
-                        className="categoryImg"
-                        src={viewall}
-                        roundedCircle
-                      />
-                      <div class="overlay">
-                        <div class="text">VIEW ALL</div>
-                      </div>
-                    </a>
-                  </div>
+              <div class="cards">
+                <div class="container">
+                  <a href="/category">
+                    <Image
+                      className="categoryImg"
+                      src={appetizer}
+                      roundedCircle
+                    />
+                    <div class="overlay2">
+                      <div class="text"> APPETIZER</div>
+                    </div>
+                  </a>
                 </div>
-            }
-            {
-
-                <div class="cards">
-                  <div class="container">
-                    <a href="products.html">
-                      <Image
-                        className="categoryImg"
-                        src={viewall}
-                        roundedCircle
-                      />
-                      <div class="overlay">
-                        <div class="text">VIEW ALL</div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-
+              </div>
             }
             {
 
-                <div class="cards">
-                  <div class="container">
-                    <a href="products.html">
-                      <Image
-                        className="categoryImg"
-                        src={viewall}
-                        roundedCircle
-                      />
-                      <div class="overlay">
-                        <div class="text">VIEW ALL</div>
-                      </div>
-                    </a>
-                  </div>
+              <div class="cards">
+                <div class="container">
+                  <a href="/category">
+                    <Image
+                      className="categoryImg"
+                      src={viewall}
+                      roundedCircle
+                    />
+                    <div class="overlay2">
+                      <div class="text">VIEW ALL</div>
+                    </div>
+                  </a>
                 </div>
+              </div>
+
+            }
+            {
+
+              <div class="cards">
+                <div class="container">
+                  <a href="/category">
+                    <Image
+                      className="categoryImg"
+                      src={viewall}
+                      roundedCircle
+                    />
+                    <div class="overlay2">
+                      <div class="text">VIEW ALL</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
 
             }
           </Row>
