@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Form from "react-bootstrap/Form";
 import { Button } from "react-bootstrap";
-import { Col } from "react-bootstrap";
 import Modal from "react-bootstrap/Modal";
 
 import { withAuth0 } from "@auth0/auth0-react";
@@ -12,7 +11,6 @@ export class Profile extends Component {
     const { user } = this.props.auth0;
     this.state = {
       showComment: false,
-      // showForm: false,
       data: [],
       showUpdateForm: false,
       profileImg: user.picture,
@@ -102,65 +100,3 @@ export class Profile extends Component {
   }
 }
 export default withAuth0(Profile);
-
-// <div id="section3">
-//   <h2>Recipies</h2>
-//   <button id="buttonId3" onClick={this.addCommint}>
-//     Comment
-//   </button>
-//   {/* <button id="buttonId4">Add</button> */}
-//   <div>
-//     <h2>Information</h2>
-//     <p>
-//       Lorem ipsum dolor sit amet et delectus accommodare his consul
-//       copiosae legendos at vix ad putent delectus delicata usu. Vidit
-//     </p>
-//     <img
-//       src="https://s3.amazonaws.com/appforest_uf/f1604057844295x639249448988566800/usertesting.png"
-//       alt=""
-//     />
-//     {this.state.showComment && (
-//       <Form>
-//         <Form.Row>
-//           <Form.Label column lg={2}>
-//             Normal Text
-//           </Form.Label>
-//           <Col>
-//             <Form.Control
-//               type="text"
-//               placeholder="User Name"
-//               required
-//             />
-//           </Col>
-//         </Form.Row>
-//         <Form.Row>
-//           <Form.Label column lg={2}>
-//             Commint
-//           </Form.Label>
-//           <Col>
-//             <Form.Control
-//               type="text"
-//               placeholder="Write a text"
-//               required
-//             />
-//           </Col>
-//         </Form.Row>
-//         <Button variant="primary" type="submit">
-//           Submit
-//         </Button>
-//       </Form>
-//     )}
-//   </div>
-// </div>
-///////////////////////////////////////////////////////////
-// render(<Example />);
-// <Form>
-// <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-//   <Form.Label>Email address</Form.Label>
-//   <Form.Control type="email" placeholder="name@example.com" />
-// </Form.Group>
-// <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-//   <Form.Label>Example textarea</Form.Label>
-//   <Form.Control as="textarea" rows={3} />
-// </Form.Group>
-// </Form>;
