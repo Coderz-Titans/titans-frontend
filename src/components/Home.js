@@ -9,11 +9,12 @@ import hero2 from "../images/hero2.jpg";
 import hero3 from "../images/hero3.jpg";
 import hero4 from "../images/hero4.jpg";
 import hero5 from "../images/hero5.jpg";
-import drinks from "../images/drink.jpg";
 import mainCourse from "../images/mainCourse.jpg";
 import snacks from "../images/snacks.jpg";
 import dessert from "../images/dessert.jpg";
-import viewall from "../images/viewall.jpg";
+import soup from "../images/soup.jpg";
+import bread from "../images/bread.jpg";
+import salad from "../images/salad.jpg";
 import appetizer from "../images/appetizer.jpg";
 
 import breakfast from "../images/breakfast.jpg";
@@ -157,9 +158,9 @@ export class Home extends Component {
               <div class="cards">
                 <div class="container">
                   <a href="/category">
-                    <Image className="categoryImg" src={drinks} roundedCircle />
+                    <Image className="categoryImg" src={salad} roundedCircle />
                     <div class="overlay1">
-                      <div class="text">DRINKS</div>
+                      <div class="text">SALAD</div>
                     </div>
                   </a>
                 </div>
@@ -205,11 +206,11 @@ export class Home extends Component {
                     <a href="/category">
                       <Image
                         className="categoryImg"
-                        src={viewall}
+                        src={bread}
                         roundedCircle
                       />
                       <div class="overlay2">
-                        <div class="text">VIEW ALL</div>
+                        <div class="text">BREAD</div>
                       </div>
                     </a>
                   </div>
@@ -223,11 +224,11 @@ export class Home extends Component {
                     <a href="/category">
                       <Image
                         className="categoryImg"
-                        src={viewall}
+                        src={soup}
                         roundedCircle
                       />
                       <div class="overlay2">
-                        <div class="text">VIEW ALL</div>
+                        <div class="text">SOUP</div>
                       </div>
                     </a>
                   </div>
