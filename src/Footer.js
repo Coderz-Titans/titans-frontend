@@ -2,7 +2,6 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
-import { FaGithub } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
@@ -21,16 +20,35 @@ class Footer extends React.Component {
           id="footer"
         >
           <img className="logo" src={logo} alt="logo" />
-          <Link to="/about">About Us</Link>{" "}
-        <h1 className="groubName">CODERZ-TITANS</h1>
-        <h3 className="tel">Tel:0962111222888</h3>
-          <p>
+          <div className="links">
+
+          <Link className="footerLink1" to="/about">ABOUT US</Link>{" "}
+          <Link className="footerLink2" to="/about">CONTACT US</Link>{" "}
+          <Link className="footerLink3" to="/">PRIVACY POLICY</Link>{" "}
+          </div>
+
+        
+          <p className="frinds">LET'S BE FRIENDS!</p>
+
+          <div  className="socialMedia">
+          <p className="intagram">
             {" "}
-            <FaGithub />
             <FaInstagram />
+          </p>
+          <p className="twitter">
+            {" "}
             <FaTwitter />
+          </p>
+          <p className="facebook">
+          {" "}
             <FaFacebook />
           </p>
+
+          </div>
+          <div className="h6">
+          <h6>&copy;2021.ALL RIGHTS RESERVED</h6>
+
+          </div>
         </Navbar>
       </div>
     );
