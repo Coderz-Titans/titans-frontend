@@ -12,7 +12,7 @@ body {
 .footer {
   text-align: center;
   clear: both;
-  margin-top: 90%;
+  margin-top: 200%;
   height: 10%;
 }
 .h6 {
@@ -62,4 +62,23 @@ body {
   position: relative;
   left: 985px;
   top: 50px;
+}
+
+.collectionCards{
+margin-bottom: 4%;
+  padding: 0%;
+}
+
+.collectionCards :hover{
+  outline: none;
+  border-color: #BFCAD9;
+  box-shadow: 0 0 10px gold;
+  transform: translateY(-1px);
+}
+
+.collectionCards2 :hover{
+  outline: none;
+  border-color: #BFCAD9;
+  box-shadow: 0 0 5px gold;
+  /* transform: translateY(-1px); */
 }

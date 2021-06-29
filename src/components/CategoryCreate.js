@@ -29,6 +29,7 @@ export class CategoryCreate extends Component {
             <>
                 { this.props.showBySort &&
                     <Col xs={6} md={4}>
+                    <div className="collectionCards2" >
                         <Card style={{ width: "18rem" }}>
                             <Card.Img
                                 variant="top"
@@ -42,13 +43,15 @@ export class CategoryCreate extends Component {
                                 </Card.Text>
                             </Card.Body>
 
-                        </Card>
+                    </Card>
+                    </div>
                     </Col>
                 }
-                
+
                 {this.props.showRecipies &&
-                    <Col xs={6} md={4}>
-                        <Card style={{ width: "18rem" }} onSubmit={this.function}>
+                    <Col xs={6} md={4} >
+                    <div className="collectionCards" >
+                        <Card style={{ width: "18rem" }} onSubmit={this.function} >
                             <Card.Img
                                 variant="top"
                                 src={this.props.image}
@@ -70,6 +73,7 @@ export class CategoryCreate extends Component {
                                 }
                             </Card.Body>
                         </Card>
+                        </div>
                     </Col>
                 }
             </>

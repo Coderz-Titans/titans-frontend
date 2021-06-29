@@ -16,12 +16,36 @@ export class category extends Component {
       recipysData: [],
       sortedData: [],
       showSort: false,
+      userSearch:'breakfast',
     }
   }
 
+  searchChange = (e) => {
+    e.preventDefault();
+    this.setState({
+      userSearch: e.target.value,
+    })
+    console.log(this.state.userSearch);
+  }
+  
+  //96fb6427bbb14ca69161ce3bd9b5a06c : ibrahim
+  searchFunction = () => {
+ axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=96fb6427bbb14ca69161ce3bd9b5a06c&query=${this.state.userSearch}&fillIngredients=true&number=24&addRecipeInformation=true`).then(response => {
+   console.log(response);
+   this.setState({
+    recipysData: response.data.results,
+   })
+ }).catch(error => {
+   alert(error.message);
+  })
+}
+
+
+
+
   functionl = async (value) => {
 
-    await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey='96fb6427bbb14ca69161ce3bd9b5a06c'&type=breakfast&fillIngredients=true&number=25&addRecipeInformation=true&sort=${value}&sortDirection=desc`).then(response => {
+    await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=96fb6427bbb14ca69161ce3bd9b5a06c&type=${this.state.userSearch}&fillIngredients=true&number=25&addRecipeInformation=true&sort=${value}&sortDirection=desc`).then(response => {
       console.log(response);
       console.log(this.state.sortedData);
       console.log(this.state.showSort);
@@ -35,7 +59,7 @@ export class category extends Component {
         alert(error.message);
       }
     )
-    this.state.sortedData.splice(6, (this.state.sortedData.length))
+    this.state.sortedData.splice(8, (this.state.sortedData.length))
     this.setState({
       showSort: true,
     })
@@ -49,7 +73,7 @@ export class category extends Component {
   }
 
   componentDidMount = async () => {
-    await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey='96fb6427bbb14ca69161ce3bd9b5a06c'&type=breakfast&fillIngredients=true&number=25&addRecipeInformation=true`).then(response => {
+    await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=96fb6427bbb14ca69161ce3bd9b5a06c&type=breakfast&fillIngredients=true&number=24&addRecipeInformation=true`).then(response => {
       console.log(response);
       this.setState({
         recipysData: response.data.results,
@@ -65,7 +89,7 @@ export class category extends Component {
 
   render() {
     return (
-      <div>
+      <div id="category">
         <div>
           <div class="row">
             <h1 id="h1Category">CATEGORY</h1>
@@ -78,15 +102,16 @@ export class category extends Component {
                 placeholder="Search"
                 aria-label="Search"
                 aria-describedby="search-addon"
+                onChange={this.searchChange}
               />
-              <button type="button" class="btn btn-outline-primary">
+              <button type="button" class="btn btn-outline-primary" onClick={this.searchFunction}>
                 search
               </button>
             </div>
           </div>
 
           <Row id="DropdownButton">
-            <DropdownButton id="dropdown-basic-button" title="Type of arrange">
+            <DropdownButton id="dropdown-basic-button" title="Favorite types">
               <Dropdown.Item href="#/action-1" value="popularity" id="BreakfastId" onClick={() => this.functionl(document.getElementById('BreakfastId').getAttribute('value'))}> Popularity</Dropdown.Item>
 
               <Dropdown.Item href="#/action-1" value="time" id="BreakfastId2" onClick={() => this.functionl(document.getElementById('BreakfastId2').getAttribute('value'))}>Time</Dropdown.Item>

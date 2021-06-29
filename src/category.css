@@ -1,16 +1,44 @@
 
-/* .footer{
-    text-align: center;
-    clear: both;
-    margin-top: 140%;
-    }
-   */
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital@1&display=swap');
+
+  #category{
+background-color: #232423;
+   }
+
   #h1Category {
+    color: bisque;
     text-align: center;
     margin: 4%;
     margin-bottom: 2%;
   margin-left: 40%;
+  font-family: 'Cabin', sans-serif;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #caceca;
+  padding: 2%;
+  transition: 1s;
   }
+
+  .row h1:hover{
+    outline: none;
+    border-color: #BFCAD9;
+    box-shadow: inset 0px 0px 10px 10px rgb(255, 255, 255);
+    transition: 1s;
+    transform: translateY(-10px);
+  }
+
+  .row h1::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    background: gold;
+    z-index: -2;
+    filter: blur(40px);
+    transition: 1s;
+}
   
   #hr-image {
     display: block;
@@ -22,10 +50,18 @@
   }
   
   #searchInput {
-    width: 50%;
-    margin-left: 25%;
+    width: 60%;
+    margin-left: 32%;
     margin-bottom: 5%;
   }
+
+  #searchInput :hover{
+    outline: none;
+    border-color: #BFCAD9;
+    box-shadow: 0 0 10px gold;
+    transform: translateY(-5px);
+  }
+
   .row{
     position: relative;
   }
@@ -35,23 +71,34 @@
   margin-left: 30%;
   border-style: solid;
   border-width: 3px;
-  border-color: #434b43;
-  border-top-color: #ffffff;
-  border-right-color: #ffffff;
-  border-bottom-color: #ffffff ;
+  border-color: #caceca;
+  border-top-color: #232423;
+  border-right-color: #232423;
+  border-bottom-color: #232423 ;
   margin-top: 2%;
-  padding-left: 1%;
+  /* padding-left: 1%; */
   }
   
+
+
   #DropdownButton{
     margin-left: 3%;
+    display: table-column;
     position: absolute;
-    margin-top: 3%;
+    margin-top: 1%;
     width: 10%;
   }
-  
+  #dropdown-basic-button{
+    margin-top: 0%;
+    margin-left: 20%;
+    margin-bottom: 10%;
+    width: 175%;
+        transform: translateY(-5px);
+  }
+
   .heartRate{
     display: inline-block;
     margin-bottom: 0%;
   }
+  
   
