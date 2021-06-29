@@ -29,16 +29,21 @@ export class Home extends Component {
 
     this.state = {
       recipysData: [],
-      // type: 'dessert',
+      type: '',
     }
   }
 
-  // chooseTyp = (value) => {
-  //   this.setState({
-  //     type: value,
-  //   })
-  //   console.log(this.state.type);
-  // }
+  chooseType = (value) => {
+  //  const amman = document.getElementById('BreakfastId').value
+    
+       console.log( 'value : ',value);
+    this.setState({
+      type:value,
+    })
+    console.log('type value : ' , this.state.type );
+  }
+
+  
 
   render() {
     return (
@@ -122,9 +127,9 @@ export class Home extends Component {
           <h2 className="foodiesCategories"> FOODIES CATEGORIES</h2>
           <Row>
             {
-              <div class="cards">
+              <div class="cards"  value="breakfast" id="BreakfastId" onClick={()=>this.chooseType(document.getElementById('BreakfastId').getAttribute('value'))}>
                 <div class="container">
-                  <a href="/category">
+                  {/* <a href="/category"> */}
                     <Image
                       className="categoryImg"
                       src={breakfast}
@@ -134,7 +139,7 @@ export class Home extends Component {
                     <div class="overlay1">
                       <div class="text">BREAKFAST</div>
                     </div>
-                  </a>
+                  {/* </a> */}
                 </div>
               </div>
             }

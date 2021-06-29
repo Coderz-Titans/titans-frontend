@@ -3,8 +3,6 @@ import CategoryCreate from './CategoryCreate';
 import axios from 'axios';
 // import { Button } from "bootstrap";
 import React, { Component } from "react";
-import Card from "react-bootstrap/Card";
-import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import DropdownButton from 'react-bootstrap/DropdownButton'
 
@@ -16,23 +14,42 @@ export class category extends Component {
       show: true,
       heartNumber: 0,
       recipysData: [],
+      sortedData: [],
+      showSort: false,
     }
   }
 
-  functionl = () => {
+  functionl = async (value) => {
+
+    await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey='96fb6427bbb14ca69161ce3bd9b5a06c'&type=breakfast&fillIngredients=true&number=25&addRecipeInformation=true&sort=${value}&sortDirection=desc`).then(response => {
+      console.log(response);
+      console.log(this.state.sortedData);
+      console.log(this.state.showSort);
+      this.setState({
+        sortedData: response.data.results,
+      })
+
+      console.log(this.state.showSort);
+    }).catch(
+      error => {
+        alert(error.message);
+      }
+    )
+    this.state.sortedData.splice(6, (this.state.sortedData.length))
     this.setState({
-      show: true,
+      showSort: true,
     })
+    console.log(this.state.sortedData);
   }
+
   heartRate = () => {
     this.setState({
       heartNumber: this.state.heartNumber + 1,
     })
   }
 
-  componentDidMount = () => {
-    console.log(this.state.serverUrl);
-    axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey='96fb6427bbb14ca69161ce3bd9b5a06c'&type=dessert&fillIngredients=true&number=25&addRecipeInformation=true`).then(response => {
+  componentDidMount = async () => {
+    await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey='96fb6427bbb14ca69161ce3bd9b5a06c'&type=breakfast&fillIngredients=true&number=25&addRecipeInformation=true`).then(response => {
       console.log(response);
       this.setState({
         recipysData: response.data.results,
@@ -69,38 +86,40 @@ export class category extends Component {
           </div>
 
           <Row id="DropdownButton">
-            <DropdownButton id="dropdown-basic-button" title="Dropdown button">
-              <Dropdown.Item href="#/action-1" onClick={this.functionl}>The most rated</Dropdown.Item>
+            <DropdownButton id="dropdown-basic-button" title="Type of arrange">
+              <Dropdown.Item href="#/action-1" value="popularity" id="BreakfastId" onClick={() => this.functionl(document.getElementById('BreakfastId').getAttribute('value'))}> Popularity</Dropdown.Item>
+
+              <Dropdown.Item href="#/action-1" value="time" id="BreakfastId2" onClick={() => this.functionl(document.getElementById('BreakfastId2').getAttribute('value'))}>Time</Dropdown.Item>
+
+              <Dropdown.Item href="#/action-1" value="calories" id="BreakfastId3" onClick={() => this.functionl(document.getElementById('BreakfastId3').getAttribute('value'))}>Calories</Dropdown.Item>
             </DropdownButton>
 
-            {this.state.show &&
-              <Col xs={6} md={4}>
-                <Card style={{ width: "18rem" }}>
-                  <Card.Img
-                    variant="top"
-                    src="https://blog.amigofoods.com/wp-content/uploads/2020/07/costa-rican-breakfast-foods.jpg"
-                  />
-                  <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <Card.Text>
-                      Some quick example text to build on the card title and make up the
-                      bulk of the card's content.
-                    </Card.Text>
-                  </Card.Body>
+            {this.state.showSort &&
+              this.state.sortedData
+                .map((element) => {
+                  console.log(element);
+                  return (
+                    <CategoryCreate
+                      showBySort={true}
+                      title={element.title}
+                      image={element.image}
+                      summary={element.summary}
+                      object={element.likes}
+                    />
+                  )
+                })}
 
-                </Card>
-                {/* <CategoryCreate /> */}
-              </Col>
-            }
+
 
           </Row>
         </div>
         <Row id="cardCategory">
-          {
+
+          {this.state.show &&
             this.state.recipysData.map((element) => {
-              console.log(element);
               return (
                 <CategoryCreate
+                  showRecipies={true}
                   title={element.title}
                   image={element.image}
                   summary={element.summary}

@@ -25,30 +25,54 @@ export class CategoryCreate extends Component {
 
     render() {
         return (
-            <Col xs={6} md={4}>
-                <Card style={{ width: "18rem" }} onSubmit={this.function}>
-                    <Card.Img
-                        variant="top"
-                        src={this.props.image}
-                    />
-                    <Card.Body>
-                        <Card.Title>{this.props.title}</Card.Title>
-                        <Card.Text>
-                            <p onClick={this.heartRate} class="heartRate">❤️ = {this.state.heartNumber}</p>
-                        </Card.Text>
-                        <Card.Text onClick={this.functionl}> See more </Card.Text>
-                        {this.state.show &&
-                            <Card.Text>
 
-                                {this.props.summary}
-                                <br></br>
+            <>
+                { this.props.showBySort &&
+                    <Col xs={6} md={4}>
+                        <Card style={{ width: "18rem" }}>
+                            <Card.Img
+                                variant="top"
+                                src={this.props.image}
+                            />
+                            <Card.Body>
+                            <Card.Title>{ this.props.title}</Card.Title>
+                                <Card.Text>
+                                    Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.
+                                </Card.Text>
+                            </Card.Body>
 
-                                <p onClick={this.heartRate} class="heartRate">❤️ = {this.state.heartNumber}</p>
-                            </Card.Text>
-                        }
-                    </Card.Body>
-                </Card>
-            </Col>
+                        </Card>
+                    </Col>
+                }
+                
+                {this.props.showRecipies &&
+                    <Col xs={6} md={4}>
+                        <Card style={{ width: "18rem" }} onSubmit={this.function}>
+                            <Card.Img
+                                variant="top"
+                                src={this.props.image}
+                            />
+                            <Card.Body>
+                                <Card.Title>{this.props.title}</Card.Title>
+                                <Card.Text>
+                                    <p onClick={this.heartRate} class="heartRate">❤️ = {this.state.heartNumber}</p>
+                                </Card.Text>
+                                <Card.Text onClick={this.functionl}> See more </Card.Text>
+                                {this.state.show &&
+                                    <Card.Text>
+
+                                        {this.props.summary}
+                                        <br></br>
+
+                                        <p onClick={this.heartRate} class="heartRate">❤️ = {this.state.heartNumber}</p>
+                                    </Card.Text>
+                                }
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                }
+            </>
         );
     }
 }
