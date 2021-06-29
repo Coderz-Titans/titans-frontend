@@ -45,21 +45,21 @@ body {
 .footerLink1 {
   color: #DEE2E6;
   text-decoration: none;
-  position: relative;
+  /* position: relative; */
   left: 1175px;
   bottom: 15px;
 }
 .footerLink2 {
   color: #DEE2E6;
   text-decoration: none;
-  position: relative;
+  /* position: relative; */
   left: 1090px;
   top: 20px;
 }
 .footerLink3 {
   color: #DEE2E6;
   text-decoration: none;
-  position: relative;
+  /* position: relative; */
   left: 985px;
   top: 50px;
 }

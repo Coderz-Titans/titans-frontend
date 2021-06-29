@@ -5,7 +5,7 @@ import logo from "./images/logo.png";
 import { withAuth0 } from "@auth0/auth0-react";
 import Logout from "./components/Logout";
 import LoginButton from "./components/LoginButton";
-import Profile from "./components/Profile";
+// import Profile from "./components/Profile";
 
 class Header extends React.Component {
   render() {
@@ -46,10 +46,10 @@ class Header extends React.Component {
 }
 export default withAuth0(Header);
 
-{
-  /* <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-<Link className="nav" to="/profile">
-            Profile
-          </Link>
-            </Navbar> */
-}
+// {
+//   /* <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+// <Link className="nav" to="/profile">
+//             Profile
+//           </Link>
+//             </Navbar> */
+// }
