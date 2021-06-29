@@ -1,5 +1,10 @@
 import React from "react";
 // import "./App.css";
+import './profile.css';
+import './category.css';
+import './aboutUs.css';
+import './main.css';
+import './news.css';
 import Home from "./components/Home";
 import Category from "./components/Category";
 import Profile from "./components/Profile";

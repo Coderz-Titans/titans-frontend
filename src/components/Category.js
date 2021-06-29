@@ -1,51 +1,130 @@
+import Dropdown from 'react-bootstrap/Dropdown'
+// import { Button } from "bootstrap";
 import React, { Component } from "react";
 import Card from "react-bootstrap/Card";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import DropdownButton from 'react-bootstrap/DropdownButton'
 
 export class category extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      show: false,
+      heartNumber: 0,
+    }
+  }
+
+  functionl = () => {
+    this.setState({
+      show: true,
+    })
+  }
+  heartRate = () => {
+    this.setState({
+      heartNumber: this.state.heartNumber + 1,
+    })
+  }
+
   render() {
     return (
-      <div>
-        <Card>
-          <Card.Img variant="top" src="holder.js/100px160" />
-          <Card.Body>
-            <Card.Title>Card title</Card.Title>
-            <Card.Text>
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
-            </Card.Text>
-          </Card.Body>
-          <Card.Footer>
-            <small className="text-muted">Last updated 3 mins ago</small>
-          </Card.Footer>
-        </Card>
-        <Card>
-          <Card.Img variant="top" src="holder.js/100px160" />
-          <Card.Body>
-            <Card.Title>Card title</Card.Title>
-            <Card.Text>
-              This card has supporting text below as a natural lead-in to
-              additional content.{" "}
-            </Card.Text>
-          </Card.Body>
-          <Card.Footer>
-            <small className="text-muted">Last updated 3 mins ago</small>
-          </Card.Footer>
-        </Card>
-        <Card>
-          <Card.Img variant="top" src="holder.js/100px160" />
-          <Card.Body>
-            <Card.Title>Card title</Card.Title>
-            <Card.Text>
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This card has even longer content
-              than the first to show that equal height action.
-            </Card.Text>
-          </Card.Body>
-          <Card.Footer>
-            <small className="text-muted">Last updated 3 mins ago</small>
-          </Card.Footer>
-        </Card>
+      <div class="row">
+        <h1 id="h1Category">CATEGORY</h1>
+        <hr id="hr-image"></hr>
+
+        <div class="input-group" id="searchInput">
+          <input
+            type="search"
+            class="form-control rounded"
+            placeholder="Search"
+            aria-label="Search"
+            aria-describedby="search-addon"
+          />
+          <button type="button" class="btn btn-outline-primary">
+            search
+          </button>
+        </div>
+        <Row id="DropdownButton">
+          <DropdownButton id="dropdown-basic-button" title="Dropdown button">
+            <Dropdown.Item href="#/action-1" onClick={this.functionl}>Action</Dropdown.Item>
+            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+          </DropdownButton>
+          {this.state.show &&
+            <Col xs={6} md={4}>
+              <Card style={{ width: "18rem" }}>
+                <Card.Img
+                  variant="top"
+                  src="https://blog.amigofoods.com/wp-content/uploads/2020/07/costa-rican-breakfast-foods.jpg"
+                />
+                <Card.Body>
+                  <Card.Title>Card Title</Card.Title>
+                  <Card.Text>
+                    Some quick example text to build on the card title and make up the
+                    bulk of the card's content.
+                  </Card.Text>
+                </Card.Body>
+
+              </Card>
+            </Col>
+          }
+        </Row>
+        <Row id="cardCategory">
+          <Col xs={6} md={4}>
+            <Card style={{ width: "18rem" }} onSubmit={this.function}>
+              <Card.Img
+                variant="top"
+                src="https://blog.amigofoods.com/wp-content/uploads/2020/07/costa-rican-breakfast-foods.jpg"
+              />
+              <Card.Body>
+                <Card.Title>Card Title</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up the
+                  bulk of the card's content.
+                  <br></br>
+                  <p onClick={this.heartRate} class="heartRate">❤️ = {this.state.heartNumber}</p>
+                </Card.Text>
+
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col xs={6} md={4}>
+            <Card style={{ width: "18rem" }}>
+              <Card.Img
+                variant="top"
+                src="https://blog.amigofoods.com/wp-content/uploads/2020/07/costa-rican-breakfast-foods.jpg"
+              />
+              <Card.Body>
+                <Card.Title>Card Title</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up the
+                  bulk of the card's content.
+                  <br></br>
+                  <p onClick={this.heartRate} class="heartRate">❤️ = {this.state.heartNumber}</p>
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col xs={6} md={4}>
+            <Card style={{ width: "18rem" }}>
+              <Card.Img
+                variant="top"
+                src="https://blog.amigofoods.com/wp-content/uploads/2020/07/costa-rican-breakfast-foods.jpg"
+              />
+              <Card.Body>
+                <Card.Title>Card Title</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up the
+                  bulk of the card's content.
+                  <br></br>
+                  <p onClick={this.heartRate} class="heartRate">❤️ = {this.state.heartNumber}</p>
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+
+        </Row>
       </div>
     );
   }
