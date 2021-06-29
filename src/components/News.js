@@ -2,38 +2,41 @@ import React, { Component } from "react";
 import Image from "react-bootstrap/Image";
 import news2 from "../images/news2.jpg";
 import UpdateForm from "./updateForm";
-import Carousel from 'react-bootstrap/Carousel';
+import Carousel from "react-bootstrap/Carousel";
 
 import axios from "axios";
 import NewsCard from "./NewsCard";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
-// import { withAuth0 } from "@auth0/auth0-react";
+import { withAuth0 } from "@auth0/auth0-react";
 
 export class News extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // userEmail: this.props.auth0.user.email,
+      userEmail: this.props.auth0.user.email,
       serverUrl: process.env.REACT_APP_SERVER_URL,
+
       showComment: false,
+      showModal: false,
+
       commentData: [],
       likesData: [],
       ratesData: [],
-      usersImgData: "",
-      usersNameData: "",
+      usersNameData: [],
+      usersImgData: [],
+
       usersName: "",
       usersImg: "",
-      info: "",
       commentText: "",
       likes: "",
       rates: "",
-      showModal: false,
 
       showUpdateForm: false,
       commentTextUpdate: "",
       likesUpdate: "",
       ratesUpdate: "",
+
       commentIndex: 0,
     };
   }
@@ -65,8 +68,7 @@ export class News extends Component {
   };
   /**************************end get******************************* */
 
-  /**************************start post for create************************* */
-
+  /*********COMMENTS POST**************/
   updateCommentText = (commentText) => {
     this.setState({ commentText });
   };
@@ -75,14 +77,12 @@ export class News extends Component {
     e.preventDefault();
 
     const reqBody = {
-      commentText: this.state.commentText,
-      likes: this.state.likes,
-      rates: this.state.rates,
-      usersImg: this.state.usersImg,
       usersName: this.state.usersName,
+      commentText: this.state.commentText,
+      usersImg: this.state.usersImg,
     };
     axios
-      .post(`${this.state.serverUrl}/news`, reqBody)
+      .post(`${this.state.serverUrl}/comment/:recipes_id`, reqBody)
       .then((response) => {
         // console.log(response.data.books);
         this.setState({
@@ -96,48 +96,57 @@ export class News extends Component {
       .catch((error) => alert(error.message));
     this.showingcommentModal();
   };
+  /*********** LIKES POST ****************/
+
+  createMyLike = (e) => {
+    e.preventDefault();
+
+    const reqBody = {
+      likes: this.state.likes,
+    };
+    axios
+      .post(`${this.state.serverUrl}/like/:recipes_id`, reqBody)
+      .then((response) => {
+        // console.log(response.data.books);
+        this.setState({
+          likesData: response.page[0].recipes[0].likes,
+        });
+      })
+      .catch((error) => alert(error.message));
+    this.showingcommentModal();
+  };
 
   // ************************************* End POST *************************************/
 
-  // ************************************* Start Put *************************************/
+  // ************************************* COMMENT PUT  *************************************/
 
   updatecommentTextUpdateForm = (Update) =>
     this.setState({ commentTextUpdate: Update });
-
-  updateLikesUpdateForm = (Update) => this.setState({ likesUpdate: Update });
-  updateRatesUpdateForm = (Update) => this.setState({ ratesUpdate: Update });
 
   updateForm = (commentObject, idx) => {
     console.log(commentObject);
     this.setState({
       showUpdateForm: !this.state.showUpdateForm,
       commentTextUpdate: commentObject.commentText,
-      likesUpdate: commentObject.likes,
-      ratesUpdate: commentObject.rates,
       bookIndex: idx,
     });
     console.log(this.state.commentTextUpdate);
-    console.log(this.state.likesUpdate);
-    console.log(this.state.ratesUpdate);
   };
 
   updateMyComment = (e) => {
     e.preventDefault();
     const reqBody = {
       commentText: this.state.commentTextUpdate,
-      likes: this.state.likesUpdate,
-      rates: this.state.ratesUpdate,
     };
 
     axios
-      .put(`${this.state.serverUrl}/new/${this.state.commentIndex}`, reqBody)
+      .put(
+        `${this.state.serverUrl}/comment/:comment_id/${this.state.commentIndex}`,
+        reqBody
+      )
       .then((response) => {
         this.setState({
           commentData: response.page[0].recipes[0].comments,
-          likesData: response.page[0].recipes[0].likes,
-          ratesData: response.page[0].recipes[0].rates,
-          usersImgData: response.page[0].recipes[0].usersImg,
-          usersNameData: response.page[0].recipes[0].usersName,
         });
       })
       .catch((error) => alert(error.message));
@@ -180,56 +189,48 @@ export class News extends Component {
           />
 
           <>
-            {
-              this.state.commentData.length &&
-              <Carousel id="carousel">{
-                this.state.commentData.map((value, index) => {
-                    return (
-                        <Carousel.Item interval={1000}>
-                            <img
-                                className="d-block w-100"
-                                src={value.usersImg}
-                                alt={value.usersName}
-                            />
-                            <Carousel.Caption id="carouselCaption">
-                                <h2>{value.usersName}</h2>
-                                <p>{value.commentText}</p>
-                          <p>⭐⭐⭐⭐{value.rates}</p>
-                          <p>❤️{value.likes}</p>
+            {this.state.commentData.length && (
+              <Carousel id="carousel">
+                {this.state.commentData.map((value, index) => {
+                  return (
+                    <Carousel.Item interval={1000}>
+                      <img
+                        className="d-block w-100"
+                        src={value.usersImg}
+                        alt={value.usersName}
+                      />
+                      <Carousel.Caption id="carouselCaption">
+                        <h2>{value.usersName}</h2>
+                        <p>{value.commentText}</p>
+                        <p>⭐⭐⭐⭐{value.rates}</p>
+                        <p>❤️{value.likes}</p>
 
-                                <Button onClick={e => this.UpdateForm(value, index)} >Update</Button>
-                                </Carousel.Caption>
-                        </Carousel.Item>
-
-                    )
-                })
-            }
-            </Carousel>
-            }
-            </>
-     
+                        <Button onClick={(e) => this.UpdateForm(value, index)}>
+                          Update
+                        </Button>
+                      </Carousel.Caption>
+                    </Carousel.Item>
+                  );
+                })}
+              </Carousel>
+            )}
+          </>
         </Container>
 
         <>
-          {
-            this.state.showUpdateForm &&
+          {this.state.showUpdateForm && (
             <UpdateForm
-            
               updatecommentTextUpdateForm={this.updatecommentTextUpdateForm}
               updateLikesUpdateForm={this.updateLikesUpdateForm}
               updateRatesUpdateForm={this.updateRatesUpdateForm}
-            
               commentTextUpdate={this.state.commentTextUpdate}
               likesUpdate={this.state.likesUpdate}
               ratesUpdate={this.state.ratesUpdate}
-            
               showUpdateForm={this.state.showUpdateForm}
               updateMyComment={this.updateMyComment}
               handleModalPut={this.handleModalPut}
-
             />
-        }
-        
+          )}
         </>
 
         <div>
@@ -240,4 +241,5 @@ export class News extends Component {
   }
 }
 
-export default News;
+export default withAuth0(News);
+// export default News;
