@@ -14,7 +14,7 @@ export class Profile extends Component {
   addCommint = (e) => {
     e.preventDefault();
     this.setState({
-      showForm: true
+      showForm: !this.state.showForm,
   })
 }
 
