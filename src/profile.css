@@ -9,6 +9,7 @@
     margin-top: 5%;
     margin-left: 5%;
     border-radius: 20px;
+    height: 610px;
   }
   
   #userImage{
@@ -19,19 +20,21 @@
     margin-left: 6%;
   }
   
-  #text{
-    font-family:Arial, Helvetica, sans-serif;
+#text {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 25px;
     position: absolute;
     margin-top: 18%;
-    width: 22%;
-    padding-left: 1%;
+    /* width: max-content; */
+    padding: 10px;
     margin-left: 33%;
     background-color: rgb(247, 244, 244);
-    border-radius: 20px;
+    border-radius: 40px;
     color: #050505;
-    opacity: 0.7;
-  }
+    opacity: 0.3;
+    font-size: xx-large;
+    font-weight: bolder;
+}
   
   #buttonId{
     position: absolute;
@@ -70,9 +73,11 @@
   }
   
   #buttonId2{
-    width: 13%;
-    position: absolute;
-  margin-left: 80%;
+    /* width: 13%; */
+    /* position: absolute; */
+  /* margin-left: 80%; */
+  clear: both;
+  float:r;
   color: #dee2e6;
   background-color: #0d1111;
   border-radius: 20px;
