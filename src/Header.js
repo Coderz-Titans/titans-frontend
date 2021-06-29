@@ -27,9 +27,9 @@ class Header extends React.Component {
           <Link className="nav1" to="/about">
             Register
           </Link>
-          <Link className="nav2" to="/about">
-            Log in
-          </Link>
+          {/* <Link className="nav2" to="/about">
+            <Login />
+          </Link> */}
         </Navbar>
       </div>
     );

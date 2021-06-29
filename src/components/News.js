@@ -1,130 +1,236 @@
 import React, { Component } from "react";
 import Image from "react-bootstrap/Image";
 import news2 from "../images/news2.jpg";
-import hero4 from "../images/hero4.jpg";
-import Card from "react-bootstrap/Card";
-import CardDeck from "react-bootstrap/CardDeck";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import UpdateForm from "./updateForm";
+import Carousel from 'react-bootstrap/Carousel';
+
+import axios from "axios";
+import NewsCard from "./NewsCard";
+import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
+// import { withAuth0 } from "@auth0/auth0-react";
 
 export class News extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      // userEmail: this.props.auth0.user.email,
+      serverUrl: process.env.REACT_APP_SERVER_URL,
+      showComment: false,
+      commentData: [],
+      likesData: [],
+      ratesData: [],
+      usersImgData: "",
+      usersNameData: "",
+      usersName: "",
+      usersImg: "",
+      info: "",
+      commentText: "",
+      likes: "",
+      rates: "",
+      showModal: false,
+
+      showUpdateForm: false,
+      commentTextUpdate: "",
+      likesUpdate: "",
+      ratesUpdate: "",
+      commentIndex: 0,
+    };
+  }
+
+  showingcommentModal = () => {
+    this.setState({ showModal: !this.state.showModal });
+  };
+
+  //*********************start get****************************** */
+
+  componentDidMount = () => {
+    console.log(this.state.serverUrl);
+    axios
+      .get(`${this.state.serverUrl}/news?email=${this.state.userEmail}`)
+      .then((response) => {
+        console.log(response);
+        this.setState({
+          commentData: response.page[0].recipes[0].comments,
+          likesData: response.page[0].recipes[0].likes,
+          ratesData: response.page[0].recipes[0].rates,
+          usersImgData: response.page[0].recipes[0].usersImg,
+          usersNameData: response.page[0].recipes[0].usersName,
+        });
+        // console.log(this.state.booksData.length);
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+  };
+  /**************************end get******************************* */
+
+  /**************************start post for create************************* */
+
+  updateCommentText = (commentText) => {
+    this.setState({ commentText });
+  };
+
+  createMyComment = (e) => {
+    e.preventDefault();
+
+    const reqBody = {
+      commentText: this.state.commentText,
+      likes: this.state.likes,
+      rates: this.state.rates,
+      usersImg: this.state.usersImg,
+      usersName: this.state.usersName,
+    };
+    axios
+      .post(`${this.state.serverUrl}/news`, reqBody)
+      .then((response) => {
+        // console.log(response.data.books);
+        this.setState({
+          commentData: response.page[0].recipes[0].comments,
+          likesData: response.page[0].recipes[0].likes,
+          ratesData: response.page[0].recipes[0].rates,
+          usersImgData: response.page[0].recipes[0].usersImg,
+          usersNameData: response.page[0].recipes[0].usersName,
+        });
+      })
+      .catch((error) => alert(error.message));
+    this.showingcommentModal();
+  };
+
+  // ************************************* End POST *************************************/
+
+  // ************************************* Start Put *************************************/
+
+  updatecommentTextUpdateForm = (Update) =>
+    this.setState({ commentTextUpdate: Update });
+
+  updateLikesUpdateForm = (Update) => this.setState({ likesUpdate: Update });
+  updateRatesUpdateForm = (Update) => this.setState({ ratesUpdate: Update });
+
+  updateForm = (commentObject, idx) => {
+    console.log(commentObject);
+    this.setState({
+      showUpdateForm: !this.state.showUpdateForm,
+      commentTextUpdate: commentObject.commentText,
+      likesUpdate: commentObject.likes,
+      ratesUpdate: commentObject.rates,
+      bookIndex: idx,
+    });
+    console.log(this.state.commentTextUpdate);
+    console.log(this.state.likesUpdate);
+    console.log(this.state.ratesUpdate);
+  };
+
+  updateMyComment = (e) => {
+    e.preventDefault();
+    const reqBody = {
+      commentText: this.state.commentTextUpdate,
+      likes: this.state.likesUpdate,
+      rates: this.state.ratesUpdate,
+    };
+
+    axios
+      .put(`${this.state.serverUrl}/new/${this.state.commentIndex}`, reqBody)
+      .then((response) => {
+        this.setState({
+          commentData: response.page[0].recipes[0].comments,
+          likesData: response.page[0].recipes[0].likes,
+          ratesData: response.page[0].recipes[0].rates,
+          usersImgData: response.page[0].recipes[0].usersImg,
+          usersNameData: response.page[0].recipes[0].usersName,
+        });
+      })
+      .catch((error) => alert(error.message));
+    this.handleModalPut();
+  };
+
+  handleModalPut = () => {
+    this.setState({
+      showUpdateForm: !this.state.showUpdateForm,
+    });
+  };
+
+  /*****************************************************end put ************** */
+
   render() {
     return (
       <div>
-        <head>
-          <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        <Container>
+          <Image className="news" src={news2} />
+          <div class="input-group" id="search">
+            <input
+              type="search"
+              class="form-control rounded"
+              placeholder="Search"
+              aria-label="Search"
+              aria-describedby="search-addon"
+            />
+            <button type="button" class="button">
+              search
+            </button>
+          </div>
+
+          <NewsCard
+            commentTextUpdate={this.commentTextUpdate}
+            likesUpdate={this.likesUpdate}
+            ratesUpdate={this.ratesUpdate}
+            createMyComment={this.createMyComment}
+            showingcommentModal={this.showingcommentModal}
+            showModal={this.showModal}
           />
-        </head>
 
-        <Image className="news" src={news2} />
-        <div class="input-group" id="search">
-          <input
-            type="search"
-            class="form-control rounded"
-            placeholder="Search"
-            aria-label="Search"
-            aria-describedby="search-addon"
-          />
-          <button type="button" class="button">
-            search
-          </button>
-        </div>
+          <>
+            {
+              this.state.commentData.length &&
+              <Carousel id="carousel">{
+                this.state.commentData.map((value, index) => {
+                    return (
+                        <Carousel.Item interval={1000}>
+                            <img
+                                className="d-block w-100"
+                                src={value.usersImg}
+                                alt={value.usersName}
+                            />
+                            <Carousel.Caption id="carouselCaption">
+                                <h2>{value.usersName}</h2>
+                                <p>{value.commentText}</p>
+                          <p>⭐⭐⭐⭐{value.rates}</p>
+                          <p>❤️{value.likes}</p>
 
-        <div className="container">
-          <CardDeck className="newsCards">
-            <Row id="cardRow">
-              <Col xs={6} md={10}>
-                <Card className="cardsNews">
-                  <Card.Title className="cardTtitle">Card title</Card.Title>
-                  <Image src={hero4} />
-                  <Card.Body>
-                    <Card.Text>
-                      This is a wider card with supporting text below as a
-                      natural lead-in to additional content. This content is a
-                      little bit longer.
-                    </Card.Text>
-                    <Button variant="light">❤️</Button>
-                    <Button variant="dark">Comment</Button>{" "}
-                  </Card.Body>
-                  <Card.Footer>
-                    <small className="text-muted">
-                      Last updated 3 mins ago
-                    </small>
-                  </Card.Footer>
-                </Card>
-              </Col>
+                                <Button onClick={e => this.UpdateForm(value, index)} >Update</Button>
+                                </Carousel.Caption>
+                        </Carousel.Item>
 
-              <Col xs={6} md={10}>
-                <Card className="cardsNews">
-                  <Card.Title className="cardTtitle">Card title</Card.Title>
-                  <Image src={hero4} />
-                  <Card.Body>
-                    <Card.Text>
-                      This card has supporting text below as a natural lead-in
-                      to additional content.{" "}
-                    </Card.Text>
-                    <Button variant="light">❤️</Button>
-                    <Button variant="dark">Comment</Button>{" "}
-                  </Card.Body>
-                  <Card.Footer>
-                    <small className="text-muted">
-                      Last updated 3 mins ago
-                    </small>
-                  </Card.Footer>
-                </Card>
-              </Col>
+                    )
+                })
+            }
+            </Carousel>
+            }
+            </>
+     
+        </Container>
 
-              <Col xs={6} md={10}>
-                <Card className="cardsNews">
-                  <Card.Title className="cardTtitle">Card title</Card.Title>
-                  <Image src={hero4} />
-                  {/* <Card.Img variant="top" src={news} roundedCircle /> */}
-                  <Card.Body>
-                    <Card.Text>
-                      This is a wider card with supporting text below as a
-                      natural lead-in to additional content. This card has even
-                      longer content than the first to show that equal height
-                      action.
-                    </Card.Text>
-                    <Button variant="light">❤️</Button>
-                    <Button variant="dark">Comment</Button>{" "}
-                  </Card.Body>
-                  <Card.Footer>
-                    <small className="text-muted">
-                      Last updated 3 mins ago
-                    </small>
-                  </Card.Footer>
-                </Card>
-              </Col>
+        <>
+          {
+            this.state.showUpdateForm &&
+            <UpdateForm
+            
+              updatecommentTextUpdateForm={this.updatecommentTextUpdateForm}
+              updateLikesUpdateForm={this.updateLikesUpdateForm}
+              updateRatesUpdateForm={this.updateRatesUpdateForm}
+            
+              commentTextUpdate={this.state.commentTextUpdate}
+              likesUpdate={this.state.likesUpdate}
+              ratesUpdate={this.state.ratesUpdate}
+            
+              showUpdateForm={this.state.showUpdateForm}
+              updateMyComment={this.updateMyComment}
+              handleModalPut={this.handleModalPut}
 
-              <Col xs={6} md={10}>
-                <Card className="cardsNews">
-                  <Image src={hero4} />
-                  <Card.Title className="cardTtitle">Card title</Card.Title>
-                  {/* <Card.Img variant="top" src={news} roundedCircle /> */}
-                  <Card.Body>
-                    <Card.Text>
-                      This is a wider card with supporting text below as a
-                      natural lead-in to additional content. This card has even
-                      longer content than the first to show that equal height
-                      action.
-                    </Card.Text>
-                    <Button variant="light">❤️</Button>
-                    <Button variant="dark">Comment</Button>{" "}
-                  </Card.Body>
-                  <Card.Footer>
-                    <small className="text-muted">
-                      Last updated 3 mins ago
-                    </small>
-                  </Card.Footer>
-                </Card>
-              </Col>
-            </Row>
-          </CardDeck>
-        </div>
+            />
+        }
+        
+        </>
 
         <div>
           <h3 className="popularPages"> POPULAR PAGES :</h3>

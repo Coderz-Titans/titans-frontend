@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 import hero1 from "../images/hero1.jpg";
 import hero2 from "../images/hero2.jpg";
