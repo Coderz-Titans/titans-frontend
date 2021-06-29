@@ -10,6 +10,8 @@ import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import { withAuth0 } from "@auth0/auth0-react";
 
+console.log(withAuth0);
+
 export class News extends Component {
   constructor(props) {
     super(props);
@@ -17,7 +19,6 @@ export class News extends Component {
       userEmail: this.props.auth0.user.email,
       serverUrl: process.env.REACT_APP_SERVER_URL,
 
-      showComment: false,
       showModal: false,
 
       commentData: [],
@@ -33,6 +34,7 @@ export class News extends Component {
       rates: "",
 
       showUpdateForm: false,
+
       commentTextUpdate: "",
       likesUpdate: "",
       ratesUpdate: "",
@@ -48,17 +50,17 @@ export class News extends Component {
   //*********************start get****************************** */
 
   componentDidMount = () => {
-    console.log(this.state.serverUrl);
+    console.log(this.props.auth0);
     axios
       .get(`${this.state.serverUrl}/news?email=${this.state.userEmail}`)
       .then((response) => {
         console.log(response);
         this.setState({
-          commentData: response.page[0].recipes[0].comments,
-          likesData: response.page[0].recipes[0].likes,
-          ratesData: response.page[0].recipes[0].rates,
-          usersImgData: response.page[0].recipes[0].usersImg,
-          usersNameData: response.page[0].recipes[0].usersName,
+          commentData: response.data.page[0].recipes[0].comments,
+          likesData: response.data.page[0].recipes[0].likes,
+          ratesData: response.data.page[0].recipes[0].rates,
+          usersImgData: response.data.page[0].recipes[0].usersImg,
+          usersNameData: response.data.page[0].recipes[0].usersName,
         });
         // console.log(this.state.booksData.length);
       })
@@ -86,17 +88,20 @@ export class News extends Component {
       .then((response) => {
         // console.log(response.data.books);
         this.setState({
-          commentData: response.page[0].recipes[0].comments,
-          likesData: response.page[0].recipes[0].likes,
-          ratesData: response.page[0].recipes[0].rates,
-          usersImgData: response.page[0].recipes[0].usersImg,
-          usersNameData: response.page[0].recipes[0].usersName,
+          commentData: response.data.page[0].recipes[0].comments,
+          likesData: response.data.page[0].recipes[0].likes,
+          ratesData: response.data.page[0].recipes[0].rates,
+          usersImgData: response.data.page[0].recipes[0].usersImg,
+          usersNameData: response.data.page[0].recipes[0].usersName,
         });
       })
       .catch((error) => alert(error.message));
     this.showingcommentModal();
   };
   /*********** LIKES POST ****************/
+  // updatelikes = (commentText) => {
+  //   this.setState({ commentText });
+  // };
 
   createMyLike = (e) => {
     e.preventDefault();
@@ -159,7 +164,43 @@ export class News extends Component {
     });
   };
 
-  /*****************************************************end put ************** */
+  // ************************************* END COMMENT PUT  *************************************/
+
+  // *************************************  COMMENT Delete  *************************************/
+
+  deleteMyComment = (index) => {
+    // console.log(index);
+    axios
+      .delete(
+        `${this.state.serverUrl}/comment/:comment_id/${index}?email=${this.state.userEmail}`
+      )
+      .then((response) => {
+        this.setState({
+          commentData: response.page[0].recipes[0].comments,
+        });
+        // console.log(this.state.commentData);
+      })
+      .catch((error) => alert(error.message));
+  };
+
+  // ************************************* END COMMENT Delete  *************************************/
+
+  // *************************************  LIKES Delete  *************************************/
+  deleteMyLikes = (index) => {
+    // console.log(index);
+    axios
+      .delete(
+        `${this.state.serverUrl}/like/:like_id/${index}?email=${this.state.userEmail}`
+      )
+      .then((response) => {
+        this.setState({
+          likesData: response.page[0].recipes[0].likes,
+        });
+        // console.log(this.state.commentData);
+      })
+      .catch((error) => alert(error.message));
+  };
+  // ************************************* END LIKES Delete  *************************************/
 
   render() {
     return (
@@ -182,7 +223,7 @@ export class News extends Component {
           <NewsCard
             commentTextUpdate={this.commentTextUpdate}
             likesUpdate={this.likesUpdate}
-            ratesUpdate={this.ratesUpdate}
+            // ratesUpdate={this.ratesUpdate}
             createMyComment={this.createMyComment}
             showingcommentModal={this.showingcommentModal}
             showModal={this.showModal}
@@ -221,11 +262,11 @@ export class News extends Component {
           {this.state.showUpdateForm && (
             <UpdateForm
               updatecommentTextUpdateForm={this.updatecommentTextUpdateForm}
-              updateLikesUpdateForm={this.updateLikesUpdateForm}
-              updateRatesUpdateForm={this.updateRatesUpdateForm}
+              // updateLikesUpdateForm={this.updateLikesUpdateForm}
+              // updateRatesUpdateForm={this.updateRatesUpdateForm}
               commentTextUpdate={this.state.commentTextUpdate}
               likesUpdate={this.state.likesUpdate}
-              ratesUpdate={this.state.ratesUpdate}
+              // ratesUpdate={this.state.ratesUpdate}
               showUpdateForm={this.state.showUpdateForm}
               updateMyComment={this.updateMyComment}
               handleModalPut={this.handleModalPut}
