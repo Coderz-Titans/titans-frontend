@@ -1,299 +1,251 @@
-
-
 .nav {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 5%;
-    margin-bottom: 0;
-    list-style: none;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 25px;
-    font-family: "Arima Madurai", cursive;
-    padding-bottom: 10px;
-    padding-top: 20px;
-  }
-  
-  .nav1 {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 10%;
-    margin-bottom: 0;
-    list-style: none;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 25px;
-    font-family: "Arima Madurai", cursive;
-    padding-bottom: 10px;
-    padding-top: 20px;
-  }
-  
-  .nav2 {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 5%;
-    margin-bottom: 0;
-    list-style: none;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 25px;
-    font-family: "Arima Madurai", cursive;
-    padding-bottom: 10px;
-    padding-top: 20px;
-  }
-  
-  .bio {
-    color: rgb(102, 66, 13);
-    text-align: center;
-    padding-top: 5%;
-    font-family: "Castoro", serif;
-  }
-  
-  .bio2 {
-    margin-left: 25%;
-    text-align: center;
-    padding-top: 3%;
-    font-size: 20px;
-    width: 50%;
-    font-family: "Arima Madurai", cursive;
-    font-weight: bolder;
-    line-height: 47px;
-  }
-  
-  .foodiesCategories {
-    position: relative;
-    font-size: 40px;
-    color: #c06014;
-    font-family: "Arima Madurai", cursive;
-    font-weight: bolder;
-    text-align: center;
-    padding-top: 100px;
-    border-radius: 35px;
-    margin-bottom: 3%;
-  }
-  
-  .header2 {
-    background-color: #d9bf77;
-    height: 40%;
-  }
-  
-  .carousel-item {
-    height: 600px;
-  }
-  
-  .heroText {
-    font-size: 30px;
-    color: rgb(0, 0, 0);
-  }
-  
-  .heroText1 {
-    font-size: 30px;
-    color: rgba(2, 2, 2, 0.692);
-    font-family: "Arima Madurai", cursive;
-    position: absolute;
-    top: 60px;
-    left: 465px;
-  }
-  
-  .heroText2 {
-    font-size: 100px;
-    color: #b6d6b2;
-    font-family: "Piedra", cursive;
-    text-shadow: 0 0 3px #ffffff, 0 0 5px #4d4d5a;
-  }
-  
-  .pic {
-    width: 1500px;
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
-  }
-  
-  
-  .animate__fadeInDown {
-    font-size: 100px;
-    color: #434b43;
-    font-family: "Piedra", cursive;
-    padding-top: 100px;
-  }
-  
-  .animate__flipInX {
-    font-size: 60px;
-    color: #c06014;
-    font-weight: bolder;
-    font-family: "Akaya Kanadaka", cursive;
-    /* font-family: "Arima Madurai", cursive; */
-    text-align: center;
-    padding-top: 100px;
-  }
-  
-  .dine {
-    font-size: 30px;
-    color: #d44949;
-    font-family: "Arima Madurai", cursive;
-  }
-  
-  .dine2 {
-    font-size: 30px;
-    font-family: "Arima Madurai", cursive;
-    color: #e2d5d5;
-  }
-  
-  .img-thumbnail {
-    padding: 0.25rem;
-    background-color: #fff;
-    border: 6px solid #dee2e6;
-    border-radius: 13.25rem;
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .logo {
-    height: 139px;
-    width: 160px;
-  }
-  
-  .cards {
-    /* width: 1000px; */
-    display:flex;
-    /* position: absolute; */
-    left: -60px;
-  }
-  .cards img {
-    text-align: center;
-    height:70%;
-    border-radius: 25px;
-    border: 1px solid #33073169;
-    margin: 1%;
-    margin-top: 3%;
-    margin-left: 40%;
-  }
-  
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 38px;
-    right: 0;
-    width: 20%;
-    height: 330px;
-    opacity: 0;
-    margin-top: 50px;
-    transition: .5s ease;
-    border-radius: 50%;
-    background-color:black;
-    text-align: left;
-  }
-  
-  .container:hover .overlay {
-    opacity: 0.8;
-  }
-  
-  .text {
-    color: black;
-    font-size: 50px;
-    font-weight: bolder;
-    font-family: 'Akaya Kanadaka', cursive;
-    position: absolute;
-    top: 50%;
-    left: 52%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-    text-indent: -10px;
-  }
-  
-  .categoryImg{
-    border-radius: 50%;
-  }
-  #root{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 5%;
+  margin-bottom: 0;
+  list-style: none;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: "Arima Madurai", cursive;
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+.nav1 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 10%;
+  margin-bottom: 0;
+  list-style: none;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: "Arima Madurai", cursive;
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+.nav2 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 5%;
+  margin-bottom: 0;
+  list-style: none;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: "Arima Madurai", cursive;
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+.bio {
+  color: rgb(102, 66, 13);
+  text-align: center;
+  padding-top: 5%;
+  font-family: "Castoro", serif;
+}
+.bio2 {
+  margin-left: 25%;
+  text-align: center;
+  padding-top: 3%;
+  font-size: 20px;
+  width: 50%;
+  font-family: "Arima Madurai", cursive;
+  font-weight: bolder;
+  line-height: 47px;
+}
+.foodiesCategories {
+  position: relative;
+  font-size: 40px;
+  color: #C06014;
+  font-family: "Arima Madurai", cursive;
+  font-weight: bolder;
+  text-align: center;
+  padding-top: 100px;
+  border-radius: 35px;
+  margin-bottom: 3%;
+}
+.header2 {
+  background-color: #D9BF77;
+  height: 40%;
+}
+.carousel-item {
+  height: 600px;
+}
+.heroText {
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+}
+.heroText1 {
+  font-size: 30px;
+  color: rgba(2, 2, 2, 0.692);
+  font-family: "Arima Madurai", cursive;
+  position: absolute;
+  top: 60px;
+  left: 465px;
+}
+.heroText2 {
+  font-size: 100px;
+  color: #B6D6B2;
+  font-family: "Piedra", cursive;
+  text-shadow: 0 0 3px #FFFFFF, 0 0 5px #4D4D5A;
+}
+.pic {
+  width: 1500px;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+.animate__fadeInDown {
+  font-size: 100px;
+  color: #434B43;
+  font-family: "Piedra", cursive;
+  padding-top: 100px;
+}
+.animate__flipInX {
+  font-size: 60px;
+  color: #C06014;
+  font-weight: bolder;
+  font-family: "Akaya Kanadaka", cursive;
+  /* font-family: "Arima Madurai", cursive; */
+  text-align: center;
+  padding-top: 100px;
+}
+.dine {
+  font-size: 30px;
+  color: #D44949;
+  font-family: "Arima Madurai", cursive;
+}
+.dine2 {
+  font-size: 30px;
+  font-family: "Arima Madurai", cursive;
+  color: #E2D5D5;
+}
+.img-thumbnail {
+  padding: 0.25rem;
+  background-color: #fff;
+  border: 6px solid #DEE2E6;
+  border-radius: 13.25rem;
+  max-width: 100%;
+  height: auto;
+}
+.logo {
+  height: 139px;
+  width: 160px;
+}
+.cards {
+  /* width: 1000px; */
+  display:flex;
+  /* position: absolute; */
+  left: -60px;
+}
+.cards img {
+  text-align: center;
+  height:70%;
+  border-radius: 25px;
+  border: 1px solid #33073169;
+  margin: 1%;
+  margin-top: 3%;
+  margin-left: 40%;
+}
+.container:hover .overlay {
+  opacity: 0.8;
+}
+.text {
+  color: black;
+  font-size: 50px;
+  font-weight: bolder;
+  font-family: 'Akaya Kanadaka', cursive;
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  text-indent: -10px;
+}
+.categoryImg{
+  border-radius: 50%;
+}
+#root{
+width: 100%;
+}
+.categoryImg {
+  width: 300px;
+  height: 200px;
+  border-radius: 35px;
+}
+.cards {
+  /* width: 1000px; */
+  display: flex;
+  /* position: absolute; */
+  left: -60px;
+  /* margin-left: 40px; */
+}
+.cards img {
+  text-align: center;
+  height: 70%;
+  border-radius: 25px;
+  border: 1px solid #33073169;
+  margin: 1%;
+  margin-top: 3%;
+  margin-left: 40%;
+}
+.container {
+  position: relative;
+  /* width: 20%; */
+}
+.overlay1 {
+  position: absolute;
+  top: 0;
+  bottom: 80;
+  left: 33px;
+  right: 0;
+  width: 91%;
+  height: 308px;
+  opacity: 0;
+  margin-top: 10px;
+  /* margin-bottom: 10%; */
+  margin-left: 31%;
+  transition: 0.5s ease;
+  border-radius: 50%;
+  background-color: #FFBD9B;
+  text-align: left;
+}
+
+.overlay2 {
+  position: absolute;
+  top: 0;
+  bottom: 80;
+  left: 33px;
+  right: 0;
+  width: 91%;
+  height: 340px;
+  opacity: 0;
+  margin-top: 8px;
+  /* margin-bottom: 10%; */
+  margin-left: 31%;
+  transition: 0.5s ease;
+  border-radius: 50%;
+  background-color: #FFBD9B;
+  text-align: left;
+}
+.container:hover .overlay1 {
+  opacity: 0.8;
+}
+.container:hover .overlay2 {
+  opacity: 0.8;
+}
+.text {
+  color: black;
+  font-size: 50px;
+  font-weight: bolder;
+  font-family: "Akaya Kanadaka", cursive;
+}
+.categoryImg {
+  /* border-radius: 50%; */
+  border-radius: 50%;
+}
+/***************************/
+#root {
   width: 100%;
-  }
-  
-  .categoryImg {
-    width: 300px;
-    height: 200px;
-    border-radius: 35px;
-  }
-  
-  .cards {
-    /* width: 1000px; */
-    display: flex;
-    /* position: absolute; */
-    left: -60px;
-    /* margin-left: 40px; */
-  }
-  .cards img {
-    text-align: center;
-    height: 70%;
-    border-radius: 25px;
-    border: 1px solid #33073169;
-    margin: 1%;
-    margin-top: 3%;
-    margin-left: 40%;
-  }
-  
-  .container {
-    position: relative;
-    /* width: 20%; */
-  }
-  
-  .overlay1 {
-    position: absolute;
-    top: 0;
-    bottom: 80;
-    left: 33px;
-    right: 0;
-    width: 91%;
-    height: 332px;
-    opacity: 0;
-    margin-top: 10px;
-    /* margin-bottom: 10%; */
-    margin-left: 31%;
-    transition: 0.5s ease;
-    border-radius: 50%;
-    background-color: #ffbd9b;
-    text-align: left;
-  }
-  .overlay2 {
-    position: absolute;
-    top: 0;
-    bottom: 80;
-    left: 33px;
-    right: 0;
-    width: 91%;
-    height: 326px;
-    opacity: 0;
-    margin-top: 8px;
-    /* margin-bottom: 10%; */
-    margin-left: 31%;
-    transition: 0.5s ease;
-    border-radius: 50%;
-    background-color: #ffbd9b;
-    text-align: left;
-  }
-  
-  .container:hover .overlay1 {
-    opacity: 0.8;
-  }
-  .container:hover .overlay2 {
-    opacity: 0.8;
-  }
-  
-  .text {
-    color: black;
-    font-size: 50px;
-    font-weight: bolder;
-    font-family: "Akaya Kanadaka", cursive;
-  }
-  
-  .categoryImg {
-    /* border-radius: 50%; */
-    border-radius: 50%;
-  }
-  /***************************/
-  #root {
-    width: 100%;
-  }
-  
+}

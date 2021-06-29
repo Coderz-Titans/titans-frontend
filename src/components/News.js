@@ -16,7 +16,7 @@ export class News extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      userEmail: this.props.auth0.user.email,
+      // userEmail: this.props.auth0.user.email,
       serverUrl: process.env.REACT_APP_SERVER_URL,
 
       showModal: false,
@@ -47,12 +47,12 @@ export class News extends Component {
     this.setState({ showModal: !this.state.showModal });
   };
 
-  //*********************start get****************************** */
+  //*********************recipes get****************************** */
 
   componentDidMount = () => {
     console.log(this.props.auth0);
     axios
-      .get(`${this.state.serverUrl}/news?email=${this.state.userEmail}`)
+      .get(`${this.state.serverUrl}/comment/:recipes_id?email=${this.state.userEmail}`)
       .then((response) => {
         console.log(response);
         this.setState({
