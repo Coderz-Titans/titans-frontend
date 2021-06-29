@@ -285,28 +285,21 @@ body {
   color: #dee2e6;
 }
 .facebook {
-  /* width: 50px; */
   padding-left: 30px;
 }
 .intagram {
-  /* width: 50px; */
   padding-left: 30px;
 }
 .twitter {
-  /* width: 50px; */
   padding-left: 30px;
 }
-/* .links{
- ;
 
-} */
 .footerLink1 {
   color: #dee2e6;
   text-decoration: none;
   position: relative;
   left: 1175px;
   bottom: 15px;
-  /* top: 20px; */
 }
 .footerLink2 {
   color: #dee2e6;
@@ -361,7 +354,7 @@ body {
   left: 33px;
   right: 0;
   width: 91%;
-  height: 332px;
+  height: 307px;
   opacity: 0;
   margin-top: 10px;
   /* margin-bottom: 10%; */
@@ -378,7 +371,7 @@ body {
   left: 33px;
   right: 0;
   width: 91%;
-  height: 326px;
+  height: 340px;
   opacity: 0;
   margin-top: 8px;
   /* margin-bottom: 10%; */
