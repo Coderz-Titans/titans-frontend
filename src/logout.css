@@ -1,0 +1,15 @@
+.logout {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 30%;
+  margin-bottom: 0;
+  list-style: none;
+  color: #ffffff;
+  background-color: rgb(104, 90, 90);
+  text-decoration: none;
+  font-size: 25px;
+  font-family: "Arima Madurai", cursive;
+  padding: 10px;
+  border-radius: 20px;
+  width: 6%;
+}

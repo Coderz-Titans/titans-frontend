@@ -9,9 +9,9 @@ import { BrowserRouter as Switch, Route, Router } from "react-router-dom";
 export class Main extends Component {
   render() {
     return (
-      <Router>
-        <div>
-          <Switch>
+      // <Router>
+      <div>
+        {/* <Switch>
             <Route exact path="/">
               <Home />
             </Route>
@@ -27,9 +27,9 @@ export class Main extends Component {
             <Route path="/about">
               <About />
             </Route>
-          </Switch>
-        </div>
-      </Router>
+          </Switch> */}
+      </div>
+      // </Router>
     );
   }
 }
