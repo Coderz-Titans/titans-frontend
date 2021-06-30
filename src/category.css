@@ -1,35 +1,37 @@
-
-.footer{
+/* .footer{
     text-align: center;
     clear: both;
     margin-top: 140%;
     }
-  
-  #h1Category {
-    text-align: center;
-    margin: 4%;
-    margin-bottom: 2%;
+   */
+
+/* .footer {
+} */
+#h1Category {
+  text-align: center;
+  margin: 4%;
+  margin-bottom: 2%;
   margin-left: 40%;
-  }
-  
-  #hr-image {
-    display: block;
-    background-image: url(https://raw.githubusercontent.com/LTUC/amman-201d22/main/class-10/lab-a/lab-assets/hr-img.png);
-    border: 0px;
-    height: 15px;
-    width: 100%;
-    margin-bottom: 4%;
-  }
-  
-  #searchInput {
-    width: 70%;
-    margin-left: 25%;
-    margin-bottom: 5%;
-  }
-  .row{
-    position: relative;
-  }
-  #cardCategory{
+}
+
+#hr-image {
+  display: block;
+  background-image: url(https://raw.githubusercontent.com/LTUC/amman-201d22/main/class-10/lab-a/lab-assets/hr-img.png);
+  border: 0px;
+  height: 15px;
+  width: 100%;
+  margin-bottom: 4%;
+}
+
+#searchInput {
+  width: 70%;
+  margin-left: 25%;
+  margin-bottom: 5%;
+}
+.row {
+  position: relative;
+}
+#cardCategory {
   position: absolute;
   display: inline-flex;
   margin-left: 30%;
@@ -38,18 +40,17 @@
   border-color: #434b43;
   border-top-color: #ffffff;
   border-right-color: #ffffff;
-  border-bottom-color: #ffffff ;
+  border-bottom-color: #ffffff;
   margin-top: 25%;
-  }
-  
-  #DropdownButton{
-    margin-left: 3%;
-    position: absolute;
-    margin-top: 25%;
-    width: 10%;
-  }
-  
-  .heartRate{
-    display: inline-block;
-  }
-  
+}
+
+#DropdownButton {
+  margin-left: 3%;
+  position: absolute;
+  margin-top: 25%;
+  width: 10%;
+}
+
+.heartRate {
+  display: inline-block;
+}

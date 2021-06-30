@@ -10,8 +10,8 @@ class Header extends React.Component {
   render() {
     const { isAuthenticated } = this.props.auth0;
     return (
-      <div>
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <header>
+        <Navbar id="navbar">
           <img className="logo" src={logo} alt="logo" />
 
           <Link className="nav" to="/">
@@ -39,7 +39,7 @@ class Header extends React.Component {
 
           {isAuthenticated ? <Logout /> : <LoginButton />}
         </Navbar>
-      </div>
+      </header>
     );
   }
 }
