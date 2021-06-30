@@ -15,7 +15,7 @@ export class News extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      userEmail: this.props.auth0.user.email,
+      // userEmail: this.props.auth0.user.email,
       serverUrl: process.env.REACT_APP_SERVER_URL,
 
       show: false,
@@ -41,7 +41,7 @@ export class News extends Component {
     this.setState({ showModal: !this.state.showModal });
   };
 
-  //*********************start get****************************** */
+  //*********************recipes get****************************** */
 
   componentDidMount = () => {
     // console.log(this.props.auth0);

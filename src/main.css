@@ -51,6 +51,8 @@
   font-family: "Castoro", serif;
 }
 
+
+
 .bio2 {
   margin-left: 25%;
   text-align: center;
@@ -89,7 +91,6 @@
   font-size: 30px;
   color: rgb(0, 0, 0);
 }
-
 .heroText1 {
   font-size: 30px;
   color: rgba(2, 2, 2, 0.692);
@@ -214,7 +215,6 @@
 .container:hover .overlay2 {
   opacity: 0.8;
 }
-
 .text {
   color: black;
   font-size: 50px;
