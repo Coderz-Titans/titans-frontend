@@ -17,7 +17,7 @@ export class Profile extends Component {
       showUpdateForm: false,
       profileImg: user.picture,
       profileEmail: user.email,
-      profileName: user.email,
+      profileName: user.name,
       info: "Edit your page !!",
       profileCover: "",
       serverUrl: process.env.REACT_APP_MY_SERVER,
@@ -55,21 +55,23 @@ export class Profile extends Component {
 
   handelComment = async (e, id, autherEmail) => {
     e.preventDefault();
-    console.log(e, id, autherEmail);
-    // const reqBody = {
-    //   email: autherEmail,
-    //   commenterEmail: this.state.profileEmail,
-    //   commenterImg: this.state.profileImg,
-    //   commenter: this.state.profileName,
-    //   comment: e.target.value,
-    // };
-    // await axios
-    //   .post(`${this.state.serverUrl}/comment/${id}`, reqBody)
-    //   .then((response) => {
-    //     this.setState({});
-    //     console.log(response.data);
-    //   })
-    //   .catch((error) => console.log(error.message));
+    console.log(e);
+    const reqBody = {
+      email: autherEmail,
+      commenterEmail: this.state.profileEmail,
+      commenterImg: this.state.profileImg,
+      commenter: this.state.profileName,
+      comment: e.target[0].value,
+    };
+    await axios
+      .post(`${this.state.serverUrl}/comment/${id}`, reqBody)
+      .then((response) => {
+        this.setState({
+          data: response.data,
+        });
+      
+      })
+      .catch((error) => console.log(error.message));
   };
 
   handelEdit = () => {
@@ -82,7 +84,7 @@ export class Profile extends Component {
     });
   };
 
-  componentWillMount = async () => {
+  componentDidMount = async () => {
     const reqBody = {
       email: this.state.profileEmail,
     };
