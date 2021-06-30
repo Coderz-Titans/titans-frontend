@@ -31,27 +31,34 @@ export class category extends Component {
   //96fb6427bbb14ca69161ce3bd9b5a06c : ibrahim
   //7736c74d0deb434aa6125659ca2508d6
   searchFunction = async () => {
-  await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=f5ae4e4f00374b318ad1885a57398af8&query=${this.state.userSearch}&fillIngredients=true&number=24&addRecipeInformation=true`).then(response => {
-   console.log(response);
-   this.setState({
-    recipysData: response.data.results,
-   })
- }).catch(error => {
-   alert(error.message);
-  })
-}
-
-
-
+    await axios
+      .get(
+        `https://api.spoonacular.com/recipes/complexSearch?apiKey=f5ae4e4f00374b318ad1885a57398af8&query=${this.state.userSearch}&fillIngredients=true&number=24&addRecipeInformation=true`
+      )
+      .then((response) => {
+        console.log(response);
+        this.setState({
+          recipysData: response.data.results,
+        });
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+  };
 
   functionl = async (value) => {
-
-    await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=f5ae4e4f00374b318ad1885a57398af8&type=${this.state.userSearch}&fillIngredients=true&number=25&addRecipeInformation=true&sort=${value}&sortDirection=desc`).then(response => {
-      console.log(response);
-      console.log(this.state.sortedData);
-      console.log(this.state.showSort);
-      this.setState({
-        sortedData: response.data.results,
+    await axios
+      .get(
+        `https://api.spoonacular.com/recipes/complexSearch?apiKey=f5ae4e4f00374b318ad1885a57398af8&type=${this.state.userSearch}&fillIngredients=true&number=25&addRecipeInformation=true&sort=${value}&sortDirection=desc`
+      )
+      .then((response) => {
+        console.log(response);
+        console.log(this.state.sortedData);
+        console.log(this.state.showSort);
+        this.setState({
+          sortedData: response.data.results,
+        });
+        console.log(this.state.showSort);
       })
       .catch((error) => {
         alert(error.message);
@@ -62,7 +69,6 @@ export class category extends Component {
     });
     console.log(this.state.sortedData);
   };
-
   heartRate = () => {
     this.setState({
       heartNumber: this.state.heartNumber + 1,
@@ -70,10 +76,15 @@ export class category extends Component {
   };
 
   componentDidMount = async () => {
-    await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=f5ae4e4f00374b318ad1885a57398af8&type=breakfast&fillIngredients=true&number=24&addRecipeInformation=true`).then(response => {
-      console.log(response);
-      this.setState({
-        recipysData: response.data.results,
+    await axios
+      .get(
+        `https://api.spoonacular.com/recipes/complexSearch?apiKey='f5ae4e4f00374b318ad1885a57398af8'&type=breakfast&fillIngredients=true&number=24&addRecipeInformation=true`
+      )
+      .then((response) => {
+        console.log(response);
+        this.setState({
+          recipysData: response.data.results,
+        });
       })
       .catch((error) => {
         alert(error.message);
