@@ -23,7 +23,7 @@ To make it more interesting ,less confusing we build our website to introduce a 
 ![News](src/images/Screenshot_3.png)
 ![Profile](src/images/Screenshot_4.png)
 ![About-us](src/images/Screenshot_5.png)
-![Register](src/images/Screenshot_6.png)
+
 
 
 ## How to use our websites :
