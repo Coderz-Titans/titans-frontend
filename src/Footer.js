@@ -21,33 +21,32 @@ class Footer extends React.Component {
         >
           <img className="logo" src={logo} alt="logo" />
           <div className="links">
-
-          <Link className="footerLink1" to="/about">ABOUT US</Link>{" "}
-          <Link className="footerLink2" to="/about">CONTACT US</Link>{" "}
-          <Link className="footerLink3" to="/">PRIVACY POLICY</Link>{" "}
+            <Link className="footerLink1 footeritem" to="/about">
+              ABOUT US
+            </Link>{" "}
+            <Link className="footerLink2 footeritem" to="/about">
+              CONTACT US
+            </Link>{" "}
           </div>
 
-        
           <p className="frinds">LET'S BE FRIENDS!</p>
 
-          <div  className="socialMedia">
-          <p className="intagram">
-            {" "}
-            <FaInstagram />
-          </p>
-          <p className="twitter">
-            {" "}
-            <FaTwitter />
-          </p>
-          <p className="facebook">
-          {" "}
-            <FaFacebook />
-          </p>
-
+          <div className="socialMedia">
+            <p className="intagram">
+              {" "}
+              <FaInstagram />
+            </p>
+            <p className="twitter">
+              {" "}
+              <FaTwitter />
+            </p>
+            <p className="facebook">
+              {" "}
+              <FaFacebook />
+            </p>
           </div>
           <div className="h6">
-          <h6>&copy;2021.ALL RIGHTS RESERVED</h6>
-
+            <h6>&copy;2021</h6>
           </div>
         </Navbar>
       </div>

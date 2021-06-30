@@ -5,14 +5,13 @@ import logo from "./images/logo.png";
 import { withAuth0 } from "@auth0/auth0-react";
 import Logout from "./components/Logout";
 import LoginButton from "./components/LoginButton";
-import Profile from "./components/Profile";
 
 class Header extends React.Component {
   render() {
     const { isAuthenticated } = this.props.auth0;
     return (
-      <div>
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <header>
+        <Navbar id="navbar">
           <img className="logo" src={logo} alt="logo" />
 
           <Link className="nav" to="/">
@@ -40,16 +39,8 @@ class Header extends React.Component {
 
           {isAuthenticated ? <Logout /> : <LoginButton />}
         </Navbar>
-      </div>
+      </header>
     );
   }
 }
 export default withAuth0(Header);
-
-{
-  /* <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-<Link className="nav" to="/profile">
-            Profile
-          </Link>
-            </Navbar> */
-}

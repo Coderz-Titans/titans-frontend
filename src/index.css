@@ -6,61 +6,99 @@
 @import url('https://fonts.googleapis.com/css2?family=Padauk&display=swap');
 body {
   width: 100%;
-  height: 100%;
+  height: 70%;
 }
 
-/********************************footer*************************/
-.footer {
-  text-align: center;
-  clear: both;
-  margin-top: 90%;
-  height: 10%;
+:root {
+  background-color: #232423;
 }
+/********************************footer*************************/
+
+/* .footer {
+  position: inherit;
+} */
+/* text-align: center; */
+/* clear: both; */
+/* margin-top: 90%; */
+/* height: 100%; */
+/* position: absolute; */
+
 .h6 {
   color: #dee2e6;
   position: relative;
-  top: 50px;
-  right: 90px;
+  left: 20%;
+  top: 20px;
+  font-family: "Benne", serif;
+
+  /* font-size: 3%; */
 }
 .socialMedia {
   display: flex;
   color: #ffffff;
   position: relative;
-  left: 73px;
+  top: 22%;
+  left: 60%;
 }
 .frinds {
   position: relative;
-  left: 225px;
-  bottom: 40px;
+  left: 66%;
+  bottom: 10px;
   color: #dee2e6;
+  font-family: "Benne", serif;
 }
-.facebook {
-  padding-left: 30px;
-}
-.intagram {
-  padding-left: 30px;
-}
+.facebook,
+.intagram,
 .twitter {
-  padding-left: 30px;
+  padding-left: 10px;
 }
-.footerLink1 {
-  color: #dee2e6;
+
+.footerLink1,
+.footerLink2,
+.footerLink3 {
   text-decoration: none;
-  position: relative;
-  left: 1175px;
-  bottom: 15px;
-}
-.footerLink2 {
   color: #dee2e6;
-  text-decoration: none;
-  position: relative;
-  left: 1090px;
-  top: 20px;
+  font-family: "Benne", serif;
+  display: inline-block;
+  margin-left: 40px;
+  font-size: 15px;
 }
+
+.footeritem:hover {
+  text-decoration: none;
+  color: rgb(102, 66, 13);
+  cursor: pointer;
+  position: relative;
+  padding: 5px 5px;
+  background: white;
+  font-size: 28px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  transition: all 1s;
+}
+
 .footerLink3 {
   color: #dee2e6;
   text-decoration: none;
   position: relative;
   left: 985px;
   top: 50px;
+}
+
+.collectionCards {
+  margin-bottom: 4%;
+  padding: 0%;
+}
+
+.collectionCards :hover {
+  outline: none;
+  border-color: #bfcad9;
+  box-shadow: 0 0 10px #e99e58;
+  transform: translateY(-1px);
+}
+
+.collectionCards2 :hover {
+  outline: none;
+  border-color: #bfcad9;
+  box-shadow: 0 0 5px #e99e58;
+  /* transform: translateY(-1px); */
 }

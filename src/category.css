@@ -1,55 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montez&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Benne&display=swap");
 
-.footer{
-    text-align: center;
-    clear: both;
-    margin-top: 140%;
-    }
-  
-  #h1Category {
-    text-align: center;
-    margin: 4%;
-    margin-bottom: 2%;
-  margin-left: 40%;
-  }
-  
-  #hr-image {
-    display: block;
-    background-image: url(https://raw.githubusercontent.com/LTUC/amman-201d22/main/class-10/lab-a/lab-assets/hr-img.png);
-    border: 0px;
-    height: 15px;
-    width: 100%;
-    margin-bottom: 4%;
-  }
-  
-  #searchInput {
-    width: 70%;
-    margin-left: 25%;
-    margin-bottom: 5%;
-  }
-  .row{
-    position: relative;
-  }
-  #cardCategory{
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+
+#category {
+  background-color: #232423;
+  margin-bottom: 25%;
+}
+#root {
+  background-color: #232423;
+}
+
+/************** CATEGORY HEADER***************************/
+#h1Category {
+  color: bisque;
+  text-align: center;
+  font-family: "Concert One", cursive;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #caceca;
+  padding: 1%;
+  transition: 1s;
+  margin-left: 42%;
+  margin-top: 1.5%;
+  font-size: 80px;
+}
+
+.row h1:hover {
+  outline: none;
+  border-color: #bfcad9;
+  box-shadow: inset 0px 0px 10px 10px rgb(255, 255, 255);
+  transition: 1s;
+  transform: translateY(-10px);
+}
+
+.row h1::after {
+  content: "";
   position: absolute;
-  display: inline-flex;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: #e99e58;
+  z-index: -2;
+  filter: blur(40px);
+  transition: 3s;
+}
+/************** CATEGORY HEADER***************************/
+
+#hr-image {
+  display: block;
+  background-image: url(https://raw.githubusercontent.com/LTUC/amman-201d22/main/class-10/lab-a/lab-assets/hr-img.png);
+  border: 0px;
+  height: 15px;
+  width: 100%;
+  margin-bottom: 3%;
+}
+
+/************ SERACH ********************/
+#searchInput {
+  width: 40%;
+  margin-left: 40%;
+  margin-bottom: 5%;
+  font-family: "Benne", serif;
+}
+
+#searchInput :hover {
+  outline: none;
+  border-color: #bfcad9;
+  box-shadow: 0 0 10px #e99e58;
+  transform: translateY(-5px);
+}
+
+#searchButton {
+  background-color: #e99e58;
+  color: #232423;
+  border-color: #232423;
+}
+
+/*************** SERACH ************************/
+
+/***************** CARDS CATEGORY *******************************/
+.row {
+  position: relative;
+}
+
+#cardCategory {
+  /* position: absolute; */
+  display: flex;
   margin-left: 30%;
   border-style: solid;
   border-width: 3px;
-  border-color: #434b43;
-  border-top-color: #ffffff;
-  border-right-color: #ffffff;
-  border-bottom-color: #ffffff ;
-  margin-top: 25%;
-  }
-  
-  #DropdownButton{
-    margin-left: 3%;
-    position: absolute;
-    margin-top: 25%;
-    width: 10%;
-  }
-  
-  .heartRate{
-    display: inline-block;
-  }
-  
+  border-color: #caceca;
+  border-top-color: #232423;
+  border-right-color: #232423;
+  border-bottom-color: #232423;
+  margin-top: 2%;
+  overflow: scroll;
+  width: 67%;
+  height: 700px;
+}
+/***************** CARDS CATEGORY *******************************/
+
+/*****************    DROPDOWN *******************************/
+
+#DropdownButton {
+  margin-left: 7%;
+  display: table-column;
+  position: absolute;
+  margin-top: 1%;
+  width: 10%;
+  /* font-family: "Lato", Helvetica, Arial;
+  font-size: 16px; */
+}
+#dropdown-basic-button {
+  margin-top: 0%;
+  margin-left: 1%;
+  margin-bottom: 10%;
+  width: 175%;
+  transform: translateY(-5px);
+  background-color: rgb(209, 197, 180);
+  color: #232423;
+  font-family: "Benne", serif;
+  font-size: 25px;
+}
+
+/*****************    DROPDOWN *******************************/
+
+.heartRate {
+  display: inline-block;
+  margin-bottom: 0%;
+}
+#DropDownList {
+  overflow-y: scroll;
+  height: 600px;
+  width: 170%;
+}
+
+/**********************/

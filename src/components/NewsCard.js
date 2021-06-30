@@ -36,7 +36,7 @@ export class NewsCard extends Component {
                           this.props.showingcommentModal();
                         }}
                       >
-                        save
+                        Edit
                       </Button>
                       <Button
                         variant="danger"
