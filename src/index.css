@@ -55,6 +55,7 @@ body {
 .footerLink2,
 .footerLink3 {
   text-decoration: none;
+
   color: #dee2e6;
   font-family: "Benne", serif;
   display: inline-block;
@@ -64,6 +65,7 @@ body {
 
 .footeritem:hover {
   text-decoration: none;
+
   color: rgb(102, 66, 13);
   cursor: pointer;
   position: relative;
@@ -78,7 +80,7 @@ body {
 .footerLink3 {
   color: #dee2e6;
   text-decoration: none;
-  position: relative;
+  /* position: relative; */
   left: 985px;
   top: 50px;
 }
