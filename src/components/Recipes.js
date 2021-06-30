@@ -4,6 +4,9 @@ import Button from "react-bootstrap/Button";
 import axios from "axios";
 import CardGroup from "react-bootstrap/CardGroup";
 import Accordion from "react-bootstrap/Accordion";
+import Form from "react-bootstrap/Form";
+import Alert from 'react-bootstrap/Alert';
+import Modal from 'react-bootstrap/Modal';
 // import CardColumns from "react-bootstrap/CardColumns";
 
 export class Recipes extends Component {
@@ -11,21 +14,14 @@ export class Recipes extends Component {
     super(props);
     this.state = {
       data: [],
+      showUpComment: false,
       serverUrl: process.env.REACT_APP_MY_SERVER,
     };
   }
 
-  handelComment=async (id)=>{
-    const reqBody = { email, commenterEmail, commenterImg, commenter, comment };
-    await axios
-      .put(`${this.state.serverUrl}/comment/${id}`, reqBody)
-      .then((response) => {
-        console.log("i'm heeeeeeeeeeeeeeeree");
-        this.setState({});
-        console.log(response.data);
-      })
-      .catch((error) => console.log(error.message));
-  }
+  showComment = () => {
+    this.setState({ showUpComment: !this.state.showUpComment });
+  };
   componentDidMount = async () => {
     await axios
       .get(`${this.state.serverUrl}/recipes?email=${this.props.email}`)
@@ -61,9 +57,40 @@ export class Recipes extends Component {
                     </Accordion.Collapse>
                   </Accordion>
                 </Card.Body>
-                <Button variant="primary" onClick={handelComment(item._id)}>
-                  Go somewhere
+                <Button variant="primary" onClick={this.showComment}>
+                  Comment
                 </Button>
+                <>
+                  <Modal show={this.state.showUpdateForm} onHide={this.showComment}>
+                    <Modal.Header closeButton>
+                      <Modal.Title>Comment</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                      {item.comments.map((comment, idx) => {
+                        <Alert key={idx} variant='dark'>
+                          {comment.commentText}
+                        </Alert>
+                      })}
+                      <br></br>
+                      <Form onSubmit={this.props.handelComment(item._id, item.autherEmail)}>
+                        <Form.Group
+                          className="mb-3"
+                          controlId="exampleForm.ControlTextarea1"
+                        >
+                          <Form.Label>Add a New Comment:</Form.Label>
+                          <Form.Control
+                            as="text"
+                            rows={3}
+                            placeholder="Add a New Comment"
+                          />
+                        </Form.Group>
+                        <Button variant="primary" type="submit">
+                          Comment
+                        </Button>
+                      </Form>
+                    </Modal.Body>
+                  </Modal>
+                </>
                 <Card.Footer>
                   <small className="text-muted">
                     Last updated {item.updatedAt}
@@ -77,5 +104,5 @@ export class Recipes extends Component {
     );
   }
 }
-
+//
 export default Recipes;

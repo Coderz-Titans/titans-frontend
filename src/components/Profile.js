@@ -23,6 +23,17 @@ export class Profile extends Component {
       serverUrl: process.env.REACT_APP_MY_SERVER,
     };
   }
+  handelComment=async (e,id,autherEmail)=>{
+    e.preventDefault();
+    const reqBody = { email:autherEmail, commenterEmail:this.state.profileEmail, commenterImg:this.state.profileImg, commenter:this.state.profileName, comment:e.target.value};
+    await axios
+      .put(`${this.state.serverUrl}/comment/${id}`, reqBody)
+      .then((response) => {
+        this.setState({});
+        console.log(response.data);
+      })
+      .catch((error) => console.log(error.message));
+  }
 
   updateMyPage = async (e) => {
     e.preventDefault();
@@ -154,7 +165,8 @@ export class Profile extends Component {
           </Modal>
         }
 
-        <Recipes email={this.state.profileEmail} />
+        <Recipes email={this.state.profileEmail}
+          handelComment={this.handelComment} />
       </div>
     );
   }
