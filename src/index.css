@@ -10,13 +10,14 @@ body {
 
 /********************************footer*************************/
 
-
+.footer {
+  position: inherit;
+}
 /* text-align: center; */
 /* clear: both; */
 /* margin-top: 90%; */
 /* height: 100%; */
 /* position: absolute; */
-
 
 .h6 {
   color: #dee2e6;
@@ -72,28 +73,28 @@ body {
 }
 
 .footerLink3 {
-  color: #DEE2E6;
+  color: #dee2e6;
   text-decoration: none;
   position: relative;
   left: 985px;
   top: 50px;
 }
 
-.collectionCards{
-margin-bottom: 4%;
+.collectionCards {
+  margin-bottom: 4%;
   padding: 0%;
 }
 
-.collectionCards :hover{
+.collectionCards :hover {
   outline: none;
-  border-color: #BFCAD9;
+  border-color: #bfcad9;
   box-shadow: 0 0 10px gold;
   transform: translateY(-1px);
 }
 
-.collectionCards2 :hover{
+.collectionCards2 :hover {
   outline: none;
-  border-color: #BFCAD9;
+  border-color: #bfcad9;
   box-shadow: 0 0 5px gold;
   /* transform: translateY(-1px); */
 }
