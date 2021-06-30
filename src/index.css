@@ -88,13 +88,13 @@ body {
 .collectionCards :hover {
   outline: none;
   border-color: #bfcad9;
-  box-shadow: 0 0 10px gold;
+  box-shadow: 0 0 10px #e99e58;
   transform: translateY(-1px);
 }
 
 .collectionCards2 :hover {
   outline: none;
   border-color: #bfcad9;
-  box-shadow: 0 0 5px gold;
+  box-shadow: 0 0 5px #e99e58;
   /* transform: translateY(-1px); */
 }
