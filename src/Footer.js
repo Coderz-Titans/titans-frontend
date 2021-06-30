@@ -27,9 +27,6 @@ class Footer extends React.Component {
             <Link className="footerLink2 footeritem" to="/about">
               CONTACT US
             </Link>{" "}
-            <Link className="footerLink3 footeritem" to="/">
-              PRIVACY POLICY
-            </Link>{" "}
           </div>
 
           <p className="frinds">LET'S BE FRIENDS!</p>
