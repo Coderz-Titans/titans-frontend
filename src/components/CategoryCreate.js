@@ -47,7 +47,7 @@ export class CategoryCreate extends Component {
                     </div>
                     </Col>
                 }
-
+<div className="collectionCards1">
                 {this.props.showRecipies &&
                     <Col xs={6} md={4} >
                     <div className="collectionCards" >
@@ -76,6 +76,7 @@ export class CategoryCreate extends Component {
                         </div>
                     </Col>
                 }
+               </div> 
             </>
         );
     }

@@ -119,7 +119,7 @@ export class category extends Component {
 
               <Dropdown.Item href="#/action-1" value="calories" id="BreakfastId3" onClick={() => this.functionl(document.getElementById('BreakfastId3').getAttribute('value'))}>Calories</Dropdown.Item>
             </DropdownButton>
-
+<div id="hello">
             {this.state.showSort &&
               this.state.sortedData
                 .map((element) => {
@@ -135,7 +135,7 @@ export class category extends Component {
                   )
                 })}
 
-
+</div>
 
           </Row>
         </div>
