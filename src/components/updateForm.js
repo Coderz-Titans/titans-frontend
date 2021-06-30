@@ -21,7 +21,7 @@ export class UpdateForm extends Component {
           <Modal.Body>
             <Form onSubmit={(e) => this.props.updateMyComment(e)}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Enter your comment</Form.Label>
+                <Form.Label>Edit your comment</Form.Label>
                 <Form.Control
                   type="text"
                   value={this.props.commentTextUpdate}
@@ -31,33 +31,6 @@ export class UpdateForm extends Component {
                     this.props.updatecommentTextUpdateForm(e.target.value)
                   }
                 />
-              </Form.Group>
-
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>❤️</Form.Label>
-                <Form.Control
-                  value={this.props.likesUpdate}
-                  as="textarea"
-                  required
-                  placeholder="Write a discription here"
-                  style={{ height: "100px" }}
-                  onChange={(e) =>
-                    this.props.updateLikesUpdateForm(e.target.value)
-                  }
-                />
-              </Form.Group>
-
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>⭐⭐⭐⭐</Form.Label>
-                <Form.Control
-                  as="select"
-                  aria-label="Default select example"
-                  required
-                  onChange={(e) =>
-                    this.props.updateRatesUpdateForm(e.target.value)
-                  }
-                  value={this.props.ratesUpdate}
-                ></Form.Control>
               </Form.Group>
 
               <Button variant="success" type="submit">

@@ -33,7 +33,7 @@ export class Test extends Component {
                     </div>
                     <div class="text-container">
                       <h6>Abdullah Alabbadi</h6>
-                      <h1>Software developer</h1>
+
                       <br></br>
                       <div>
                         <a href="https://github.com/Abdullah-Alabbadi">
@@ -58,7 +58,7 @@ export class Test extends Component {
                     </div>
                     <div class="text-container">
                       <h6>Abdallah Alabed</h6>
-                      <h1>Software developer</h1>
+
                       <br></br>
                       <div>
                         <a href="https://github.com/abdallahAlabed">
@@ -84,7 +84,7 @@ export class Test extends Component {
 
                     <div class="text-container">
                       <h6>Ayyoub Al Keyyam</h6>
-                      <h1>Software developer</h1>
+
                       <br></br>
                       <div className="icons-position1">
                         <a href="https://github.com/ayyoubk">
@@ -112,7 +112,7 @@ export class Test extends Component {
                     </div>
                     <div class="text-container">
                       <h6>Sanabel Abu Ezbead</h6>
-                      <h1>Software developer</h1>
+
                       <br></br>
                       <div>
                         <a href="https://github.com/Sanabel8">
@@ -137,7 +137,7 @@ export class Test extends Component {
                     </div>
                     <div class="text-container">
                       <h6>Ibrahim Alhamshari</h6>
-                      <h1>Software developer</h1>
+
                       <br></br>
                       <div>
                         <a href="https://github.com/ibrahim-alhamshari">
@@ -163,7 +163,7 @@ export class Test extends Component {
 
                     <div class="text-container">
                       <h6>Latifa Amaireh</h6>
-                      <h1>Software developer</h1>
+
                       <br></br>
                       <div>
                         <a href="https://github.com/latifaghassan">
@@ -183,7 +183,6 @@ export class Test extends Component {
             </div>
           </div>
         </div>
-
       </div>
     );
   }

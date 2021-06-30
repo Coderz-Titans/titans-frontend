@@ -1,55 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montez&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Benne&display=swap");
 
-.footer{
-    text-align: center;
-    clear: both;
-    margin-top: 140%;
-    }
-  
-  #h1Category {
-    text-align: center;
-    margin: 4%;
-    margin-bottom: 2%;
-  margin-left: 40%;
-  }
-  
-  #hr-image {
-    display: block;
-    background-image: url(https://raw.githubusercontent.com/LTUC/amman-201d22/main/class-10/lab-a/lab-assets/hr-img.png);
-    border: 0px;
-    height: 15px;
-    width: 100%;
-    margin-bottom: 4%;
-  }
-  
-  #searchInput {
-    width: 70%;
-    margin-left: 25%;
-    margin-bottom: 5%;
-  }
-  .row{
-    position: relative;
-  }
-  #cardCategory{
-  position: absolute;
-  display: inline-flex;
-  margin-left: 30%;
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+
+#category {
+  margin-bottom: 5%;
+
+}
+#root {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+ background-image: url('https://images.unsplash.com/photo-1536534692336-1dc9e76ed9c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80');
+}
+
+/************** CATEGORY HEADER***************************/
+#h1Category {
+  color: bisque;
+    font-size: 50px;
+  text-align: center;
+  font-family: "Concert One", cursive;
   border-style: solid;
   border-width: 3px;
-  border-color: #434b43;
-  border-top-color: #ffffff;
-  border-right-color: #ffffff;
-  border-bottom-color: #ffffff ;
-  margin-top: 25%;
-  }
-  
-  #DropdownButton{
-    margin-left: 3%;
-    position: absolute;
-    margin-top: 25%;
-    width: 10%;
-  }
-  
-  .heartRate{
-    display: inline-block;
-  }
-  
+  border-color: #caceca;
+  padding: 1%;
+  transition: 1s;
+  margin-left: 42%;
+  margin-top: 1.5%;
+}
+
+.row h1:hover {
+  outline: none;
+  border-color: #bfcad9;
+  box-shadow: inset 0px 0px 10px 10px rgb(255, 255, 255);
+  transition: 1s;
+  transform: translateY(-10px);
+}
+
+.row h1::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: #e99e58;
+  z-index: -2;
+  filter: blur(40px);
+  transition: 3s;
+}
+/************** CATEGORY HEADER***************************/
+
+#hr-image {
+  display: block;
+  background-image: url(https://raw.githubusercontent.com/LTUC/amman-201d22/main/class-10/lab-a/lab-assets/hr-img.png);
+  border: 0px;
+  height: 15px;
+  width: 100%;
+  margin-bottom: 3%;
+}
+
+/************ SERACH ********************/
+#searchInput {
+  width: 30%;
+  height:65px ;
+  margin-left: 65%;
+  margin-bottom: 5%;
+  font-family: "Benne", serif;
+}
+#searchInput input{
+  height: 60px;
+  width: 50%;
+}
+
+
+#searchInput :hover {
+  outline: none;
+  border-color: #111214;
+  box-shadow: 0 0 10px #e99e58;
+  transform: translateY(-5px);
+}
+
+#searchButton {
+color: rgb(253, 253, 253);
+/* border-radius: 10px; */
+  border-style: solid;
+  border-width: 3px;
+  border-color: #caceca;
+  font-size: 25px;
+width: 15%;
+height: 60px;
+}
+#searchButton:hover{
+  background-color: #e99e58;
+  color: rgb(255, 253, 250);
+}
+
+#searchButton::after {
+  color: #111214;
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: #e99e58;
+  z-index: -2;
+  filter: blur(40px);
+  transition: 3s;
+}
+
+/*************** SERACH ************************/
+
+/***************** CARDS CATEGORY *******************************/
+.row {
+  position: relative;
+}
+
+#cardCategory {
+  /* position: absolute; */
+  display: flex;
+  margin-left: 30%;
+  border-style: solid;
+  /* border-width: 3px; */
+  /* border-color: #caceca;
+  border-top-color: #232423;
+  border-right-color: #232423; */
+  /* border-left-color: white; */
+  /* border-bottom-color: #232423; */
+  margin-top: 2%;
+  overflow: scroll;
+  width: 67%;
+  height: 700px;
+}
+/***************** CARDS CATEGORY *******************************/
+
+/*****************    DROPDOWN *******************************/
+
+#DropdownButton {
+  margin-left: 7%;
+  display: table-column;
+  position: absolute;
+  margin-top: 1%;
+  width: 10%;
+  /* font-family: "Lato", Helvetica, Arial;
+  font-size: 16px; */
+}
+#dropdown-basic-button {
+  margin-top: 0%;
+  margin-left: 0%;
+  margin-bottom: 10%;
+  width: 175%;
+  transform: translateY(-5px);
+  background-color: rgb(209, 197, 180);
+  color: #232423;
+  font-family: "Benne", serif;
+  font-weight:bold;
+  font-size: 30px;
+}
+
+.dropdown button :hover{
+  outline: none;
+  border-color: #111214;
+  box-shadow: 0 0 10px #e99e58;
+  transform: translateY(-5px);
+}
+
+/* .dropdown button::after {
+  color: #111214;
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: #e99e58;
+  z-index: -2;
+  filter: blur(40px);
+  transition: 3s;
+} */
+
+
+/*****************    DROPDOWN *******************************/
+
+.heartRate {
+  display: inline-block;
+  margin-bottom: 0%;
+}
+#DropDownList {
+  overflow-y: scroll;
+  height: 600px;
+  width: 170%;
+}
+
+/**********************/

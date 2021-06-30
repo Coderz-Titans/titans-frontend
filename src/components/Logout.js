@@ -7,7 +7,7 @@ const LogoutButton = () => {
 
   return (
     <button className="logout" onClick={() => logout()}>
-      Log Out
+      LOG OUT
     </button>
   );
 };
