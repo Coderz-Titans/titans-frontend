@@ -4,6 +4,7 @@ import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
 // import { Link } from "react-router-dom";
 
+
 import hero1 from "../images/hero1.jpg";
 import hero2 from "../images/hero2.jpg";
 import hero3 from "../images/hero3.jpg";
@@ -37,9 +38,31 @@ import whiteBackground from "../images/whiteBackground.jpg";
 // <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 
 export class Home extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      recipysData: [],
+      type: '',
+    }
+  }
+
+  chooseType = (value) => {
+  //  const amman = document.getElementById('BreakfastId').value
+    
+       console.log( 'value : ',value);
+    this.setState({
+      type:value,
+    })
+    console.log('type value : ' , this.state.type );
+  }
+
+  
+
   render() {
     return (
       <div>
+
         <div>
           <head>
             <link
@@ -141,9 +164,11 @@ export class Home extends Component {
           <h2 className="foodiesCategories"> FOODIES CATEGORIES</h2>
           <Row>
             {
-              <div class="cards">
+
+              <div class="cards"  value="breakfast" id="BreakfastId" onClick={()=>this.chooseType(document.getElementById('BreakfastId').getAttribute('value'))}>
                 <div class="container">
-                  <a href="/category">
+                  {/* <a href="/category"> */}
+
                     <Image
                       className="categoryImg"
                       src={breakfast}
@@ -153,7 +178,10 @@ export class Home extends Component {
                     <div class="overlay1">
                       <div class="text">BREAKFAST</div>
                     </div>
-                  </a>
+
+      
+                  {/* </a> */}
+
                 </div>
               </div>
             }
@@ -207,7 +235,13 @@ export class Home extends Component {
               <div class="cards">
                 <div class="container">
                   <a href="/category">
-                    <Image className="categoryImg" src={snacks} roundedCircle />
+
+                    <Image
+                      className="categoryImg"
+                      src={snacks}
+                      roundedCircle
+                    />
+
                     <div class="overlay2">
                       <div class="text">SNACKS</div>
                     </div>
@@ -232,28 +266,46 @@ export class Home extends Component {
               </div>
             }
             {
+
+
               <div class="cards">
                 <div class="container">
                   <a href="/category">
-                    <Image className="categoryImg" src={soup} roundedCircle />
+                    <Image
+                      className="categoryImg"
+                      src={soup}
+                      roundedCircle
+                    />
                     <div class="overlay2">
                       <div class="text">SOUP</div>
+
                     </div>
                   </a>
                 </div>
               </div>
+
+
             }
             {
+
               <div class="cards">
                 <div class="container">
                   <a href="/category">
-                    <Image className="categoryImg" src={salad} roundedCircle />
+                    <Image
+                      className="categoryImg"
+                      src={salad}
+                      roundedCircle
+                    />
                     <div class="overlay2">
                       <div class="text">SALAD</div>
+
                     </div>
                   </a>
                 </div>
               </div>
+
+
+
             }
           </Row>
         </div>

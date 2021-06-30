@@ -10,11 +10,13 @@ body {
 
 /********************************footer*************************/
 
+
 /* text-align: center; */
 /* clear: both; */
 /* margin-top: 90%; */
 /* height: 100%; */
 /* position: absolute; */
+
 
 .h6 {
   color: #dee2e6;
@@ -67,4 +69,31 @@ body {
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
   transition: all 1s;
+}
+
+.footerLink3 {
+  color: #DEE2E6;
+  text-decoration: none;
+  position: relative;
+  left: 985px;
+  top: 50px;
+}
+
+.collectionCards{
+margin-bottom: 4%;
+  padding: 0%;
+}
+
+.collectionCards :hover{
+  outline: none;
+  border-color: #BFCAD9;
+  box-shadow: 0 0 10px gold;
+  transform: translateY(-1px);
+}
+
+.collectionCards2 :hover{
+  outline: none;
+  border-color: #BFCAD9;
+  box-shadow: 0 0 5px gold;
+  /* transform: translateY(-1px); */
 }
