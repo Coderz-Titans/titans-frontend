@@ -47,9 +47,6 @@ export class News extends Component {
     // console.log(this.props.auth0);
 
     axios
-<<<<<<< HEAD
-      .get(`${this.state.serverUrl}/comment/:recipes_id?email=${this.state.userEmail}`)
-=======
       .get(`${this.state.serverUrl}/follow?`)
       .then((response) => {
         this.setState({
@@ -66,7 +63,6 @@ export class News extends Component {
   componentDidMount = () => {
     axios
       .get(`${this.state.serverUrl}/recipes?email=${this.state.userEmail}`)
->>>>>>> main
       .then((response) => {
         this.setState({
           recipes: response.data.page[0].recipes[0],

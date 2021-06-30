@@ -2,53 +2,6 @@
   position: relative;
 }
 
-<<<<<<< HEAD
-#profileImages{
-    position: relative;
-    width: 80%;
-    
-  }
-  
-  #coverImage{
-    position: absolute;
-    width: 90%;
-    margin-top: 5%;
-    margin-left: 5%;
-    border-radius: 20px;
-  }
-  
-  #userImage{
-    position: absolute;
-    width: 24%;
-    margin-top: 10%;
-    border-radius: 200px;
-    margin-left: 6%;
-  }
-  
-  #text{
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: 25px;
-    position: absolute;
-    margin-top: 18%;
-    width: 22%;
-    padding-left: 1%;
-    margin-left: 33%;
-    background-color: rgb(247, 244, 244);
-    border-radius: 20px;
-    color: #050505;
-    opacity: 0.7;
-  }
-  
-  #buttonId{
-    position: absolute;
-    margin-top: 33%;
-    border-radius: 20px;
-    color: #dee2e6;
-    background-color: #0d1111;
-    width: 12%;
-    margin-left: 80%;
-    font-family:Arial, Helvetica, sans-serif;
-=======
 #coverImage {
   position: absolute;
   width: 90%;
@@ -88,7 +41,6 @@
   width: 12%;
   margin-left: 80%;
   font-family: Arial, Helvetica, sans-serif;
->>>>>>> main
   font-size: 20px;
 }
 
