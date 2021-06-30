@@ -1,7 +1,6 @@
 # TITANS-FRONTEND
+
 ![Coderz-Titens](https://avatars.githubusercontent.com/u/86403687?s=200&v=4)
-![flavour101]()
-![ltuc](https://dashboard.madaresonajo.com/images/Luminus%20Technical%20University%20College/1595913289.png )
 
 ## Intro:
 This project repository for a website called Flouvers 101 which contains a variety categories of food recipes which provide you with a short description for each recipe, and you can interact with it, either favorites or share your feedback. 
@@ -14,48 +13,41 @@ This project repository for a website called Flouvers 101 which contains a varie
 - Latifa Amaireh.
 - Sanabel Abu Ezbead.
 -------------------------------------------------------------------------------------------------------------------
-## Problem Domain:
+## Problem Domain: :pushpin:
 There is some difficulty in choosing what you want to eat or cook, especially for mothers 
 To make it more interesting ,less confusing we build our website to introduce a lot of delicious recipes .
+
 ## Wireframe:
-![home-page](src/images/Screenshot_1.png)
-![catogery](src/images/Screenshot_2.png)
-![news](src/images/Screenshot_3.png)
-![profile](src/images/Screenshot_4.png)
-![about-us](src/images/Screenshot_5.png)
-![register](src/images/Screenshot_6.png)
-![batabase](src/images/Screenshot_8.png)
-
-## How to build our websites :
+![Home-page](src/images/Screenshot_1.png)
+![Catogery](src/images/Screenshot_2.png)
+![News](src/images/Screenshot_3.png)
+![Profile](src/images/Screenshot_4.png)
+![About-us](src/images/Screenshot_5.png)
+![Register](src/images/Screenshot_6.png)
 
 
-## recourses
+## How to use our websites :
 
-**https://unsplash.com/**
-**https://colorhunt.co/**
-**https://fonts.google.com/**
-**https://developer.mozilla.org/en-US/**
-**https://dashboard.visme.co/v2/projects/own**
 
-## 1- Flavours 101!
+## Recourses
+[UNSPLASH](https://unsplash.com/)
+[COLORHUNT](https://colorhunt.co/)
+[FONT GOOGLE](https://fonts.google.com/)
+[DEVELOPR MOZILLA](https://developer.mozilla.org/en-US/)
+[DASHBOARD VISME](https://dashboard.visme.co/v2/projects/own)
+
 
 **1- summary of the idea.** :pushpin:
+- A website that contains a variety categories of food recipes which provide you with a short description for each recipe, and you can interact with it, either favorites or share your feedback.
 
-
-  
 **2- What problem or pain point does it solve?** :pushpin:
-
-It guides people to different types of food recipes.
+- It guides people to different types of food recipes.
 
 ---------------------------------------------------------------------------------------------------------------------
 # Domain Modeling : 
 
-https://docs.google.com/document/d/1Ttg4U8wUuYklIU0iK4aq9cR7tyAWd6D9htSQmsacbr0/edit?usp=sharing
-
+![Database](src/images/Screenshot_8.png)
 ---------------------------------------------------------------------------------------------------------------------
-# Wireframes :
-
-https://docs.google.com/document/d/1h8Horimj6TpCoRULUnORSjZVth_MTfcQ361XI7KBaUA/edit?usp=sharing
 
 ---------------------------------------------------------------------------------------------------------------------
 # USER STORIES : 
