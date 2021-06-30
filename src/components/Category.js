@@ -78,7 +78,7 @@ export class category extends Component {
   componentDidMount = async () => {
     await axios
       .get(
-        `https://api.spoonacular.com/recipes/complexSearch?apiKey='f5ae4e4f00374b318ad1885a57398af8'&type=breakfast&fillIngredients=true&number=24&addRecipeInformation=true`
+        `https://api.spoonacular.com/recipes/complexSearch?apiKey=f5ae4e4f00374b318ad1885a57398af8&type=breakfast&fillIngredients=true&number=24&addRecipeInformation=true`
       )
       .then((response) => {
         console.log(response);
@@ -109,6 +109,7 @@ export class category extends Component {
                 onChange={this.searchChange}
               />
               <button
+                id="searchButton"
                 type="button"
                 class="btn btn-outline-primary"
                 onClick={this.searchFunction}
@@ -164,20 +165,21 @@ export class category extends Component {
                 Calories
               </Dropdown.Item>
             </DropdownButton>
-
-            {this.state.showSort &&
-              this.state.sortedData.map((element) => {
-                console.log(element);
-                return (
-                  <CategoryCreate
-                    showBySort={true}
-                    title={element.title}
-                    image={element.image}
-                    summary={element.summary}
-                    object={element.likes}
-                  />
-                );
-              })}
+            <div id="DropDownList">
+              {this.state.showSort &&
+                this.state.sortedData.map((element) => {
+                  console.log(element);
+                  return (
+                    <CategoryCreate
+                      showBySort={true}
+                      title={element.title}
+                      image={element.image}
+                      summary={element.summary}
+                      object={element.likes}
+                    />
+                  );
+                })}
+            </div>
           </Row>
         </div>
         <Row id="cardCategory">
