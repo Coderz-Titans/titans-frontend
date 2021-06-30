@@ -8,20 +8,24 @@ body {
   height: 70%;
 }
 
+:root {
+  background-color: #232423;
+}
 /********************************footer*************************/
 
-
+/* .footer {
+  position: inherit;
+} */
 /* text-align: center; */
 /* clear: both; */
 /* margin-top: 90%; */
 /* height: 100%; */
 /* position: absolute; */
 
-
 .h6 {
   color: #dee2e6;
   position: relative;
-  left: 9%;
+  left: 20%;
   top: 20px;
   font-family: "Benne", serif;
 
@@ -32,11 +36,11 @@ body {
   color: #ffffff;
   position: relative;
   top: 22%;
-  left: 44%;
+  left: 60%;
 }
 .frinds {
   position: relative;
-  left: 50%;
+  left: 66%;
   bottom: 10px;
   color: #dee2e6;
   font-family: "Benne", serif;
@@ -72,30 +76,30 @@ body {
 }
 
 .footerLink3 {
-  color: #DEE2E6;
+  color: #dee2e6;
   text-decoration: none;
   position: relative;
   left: 985px;
   top: 50px;
 }
 
-.collectionCards{
-margin-bottom: 4%;
+.collectionCards {
+  margin-bottom: 4%;
   padding: 0%;
   background-color: chartreuse;
   
 }
 
-.collectionCards :hover{
+.collectionCards :hover {
   outline: none;
-  border-color: #BFCAD9;
-  box-shadow: 0 0 10px #E99E58;
+  border-color: #bfcad9;
+  box-shadow: 0 0 10px #e99e58;
   transform: translateY(-1px);
 }
 
-.collectionCards2 :hover{
+.collectionCards2 :hover {
   outline: none;
-  border-color: #BFCAD9;
-  box-shadow: 0 0 5px #E99E58;
+  border-color: #bfcad9;
+  box-shadow: 0 0 5px #e99e58;
   /* transform: translateY(-1px); */
 }

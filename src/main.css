@@ -6,6 +6,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Benne&display=swap");
 
 /***************NAV BAR / HEADER *******************/
+
 .nav {
   display: flex;
   flex-wrap: wrap;
@@ -64,7 +65,7 @@
 .foodiesCategories {
   position: relative;
   font-size: 40px;
-  color: #b49a9a;
+  color: #d9bf77;
   font-family: "Cormorant SC", serif;
 
   font-weight: bolder;
@@ -73,9 +74,12 @@
   padding-bottom: 100px;
 
   margin-bottom: 3%;
-  background-color: rgba(197, 179, 156, 0.349);
+  background-color: #232423;
 }
 
+.foodiesContainer {
+  background-color: #232423;
+}
 .header2 {
   background-color: #d9bf77;
   height: 40%;
@@ -307,12 +311,12 @@
 }
 .slide9 {
   position: absolute;
-  top: 125%;
+  top: 128%;
   right: 65%;
 }
 .slide10 {
   position: absolute;
-  top: 125%;
+  top: 128%;
   right: 18%;
 }
 .slide11 {
@@ -385,7 +389,7 @@
   border: 15px solid black;
   margin-left: 38%;
   position: absolute;
-  top: 135%;
+  top: 130%;
   padding: 100px;
 }
 
