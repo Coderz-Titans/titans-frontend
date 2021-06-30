@@ -35,10 +35,10 @@ background-color: #232423;
     left: -4px;
     right: -4px;
     bottom: -4px;
-    background: gold;
+    background: #E99E58;
     z-index: -2;
     filter: blur(40px);
-    transition: 1s;
+    transition: 3s;
 }
   
   #hr-image {
@@ -59,7 +59,7 @@ background-color: #232423;
   #searchInput :hover{
     outline: none;
     border-color: #BFCAD9;
-    box-shadow: 0 0 10px gold;
+    box-shadow: 0 0 10px #E99E58;
     transform: translateY(-5px);
   }
 
