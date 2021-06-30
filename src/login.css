@@ -1,0 +1,49 @@
+.login {
+  margin-left: 40%;
+  color: #000000;
+  background-color: rgb(204, 192, 192);
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Benne", serif;
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  background: rgb(224, 215, 214);
+  background: linear-gradient(
+    0deg,
+    rgb(255, 255, 255) 0%,
+    rgb(255, 255, 255) 100%
+  );
+}
+
+.login:hover {
+  color: #ffffff;
+  background: transparent;
+  box-shadow: none;
+}
+.login:before,
+.login:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: #e99e58;
+  box-shadow: -1px -1px 5px 0px #fff, 7px 7px 20px 0px #0003,
+    4px 4px 5px 0px #0002;
+  transition: 400ms ease all;
+}
+.login:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+.login:hover:before,
+.login:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}
