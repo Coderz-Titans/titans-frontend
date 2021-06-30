@@ -2,9 +2,11 @@ import React, { Component } from "react";
 import Form from "react-bootstrap/Form";
 import { Button } from "react-bootstrap";
 import Modal from "react-bootstrap/Modal";
-
+import axios from "axios";
 import { withAuth0 } from "@auth0/auth0-react";
 import icone from "../images/clipart974538.png";
+import Recipes from "./Recipes";
+
 export class Profile extends Component {
   constructor(props) {
     super(props);
@@ -15,12 +17,42 @@ export class Profile extends Component {
       showUpdateForm: false,
       profileImg: user.picture,
       profileEmail: user.email,
-      profileName: user.name,
+      profileName: user.email,
       info: "Edit your page !!",
-      profileCover:
-        "https://images.unsplash.com/photo-1619526881542-c81baff85fa4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80",
+      profileCover: "",
+      serverUrl: process.env.REACT_APP_MY_SERVER,
     };
   }
+
+  updateMyPage = async (e) => {
+    e.preventDefault();
+    this.handelEdit();
+    const reqBody = {
+      email: this.state.profileEmail,
+      pageName: this.state.profileEmail,
+      name: e.target[0].value,
+      coverImg: e.target[2].value,
+      profileImg: e.target[1].value,
+      info: e.target[3].value,
+    };
+
+    // to send a request for creating new data, we will be using the POST method
+    await axios
+      .put(`${this.state.serverUrl}/page`, reqBody)
+      .then((response) => {
+        console.log("i'm heeeeeeeeeeeeeeeree");
+        this.setState({
+          data: response.data,
+          profileName: e.target[0].value,
+          profileCover: e.target[2].value,
+          profileImg: e.target[1].value,
+          info: e.target[3].value,
+        });
+        console.log(response.data);
+      })
+      .catch((error) => console.log(error.message));
+  };
+
   handelEdit = () => {
     this.setState({ showUpdateForm: !this.state.showUpdateForm });
   };
@@ -30,6 +62,30 @@ export class Profile extends Component {
       showComment: !this.state.showComment,
     });
   };
+
+  componentDidMount = async () => {
+    const reqBody = {
+      email: this.state.profileEmail,
+    };
+    await axios
+      .post(`${this.state.serverUrl}/user`, reqBody)
+      .then((response) => {
+        // console.log(response.data[0]);
+        this.setState({
+          data: response.data,
+          profileImg: response.data.page[0].profileImg,
+          profileEmail: response.data.page[0].pageName,
+          profileName: response.data.page[0].name,
+          info: response.data.page[0].info,
+          profileCover: response.data.page[0].coverImg,
+        });
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error.message, this.state.data);
+      });
+  };
+
   render() {
     return (
       <div>
@@ -43,20 +99,22 @@ export class Profile extends Component {
           <img src={this.state.profileImg} alt="" id="userImage" />
           <img src={icone} alt="" id="fixImage" onClick={this.handelEdit} />
           <h2 id="text">{this.state.profileName}</h2>
-          <button id="buttonId">Follow</button>
+          {/* <button id="buttonId">Follow</button> */}
         </div>
         <div id="section2">
           <h2> Headline </h2>
           <p id="text2">{this.state.info}</p>
         </div>
-        <button id="buttonId2">Add a Recipie</button>
+        <button id="buttonId" onClick={console.log(this.state.data)}>
+          Add a Recipie
+        </button>
         {
           <Modal show={this.state.showUpdateForm} onHide={this.handelEdit}>
             <Modal.Header closeButton>
               <Modal.Title>Edit Page Info</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              <Form onSubmit={(e) => console.log(e)}>
+              <Form onSubmit={this.updateMyPage}>
                 <Form.Group
                   className="mb-3"
                   controlId="exampleForm.ControlInput1"
@@ -95,6 +153,8 @@ export class Profile extends Component {
             </Modal.Body>
           </Modal>
         }
+
+        <Recipes email={this.state.profileEmail} />
       </div>
     );
   }
