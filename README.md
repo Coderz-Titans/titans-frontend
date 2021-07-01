@@ -28,19 +28,24 @@ To make it more interesting ,less confusing we build our website to introduce a 
 
 ## How to use our websites :
 + In homepage we provide a links to all pages and the user can choose also from multiple categorites of foods, each category consists of different types of recipies.
-  ![Home page](src/images/MAINPAGE.gif)
+
+![Home page](src/images/MAINPAGE.gif)
   
 + The user can log in by using auth0 and there will be a profile page for him.  
-  ![Auth0](src/images/auth0.gif)
+
+![Auth0](src/images/auth0.gif)
 
 + In category page, the user can search for his favourtite food and the result will show to him different ways to cook his specific food. Also there's a dropdown button which unable him to choose to see the most favourite foods provided with other options.    
-  ![Category page](src/images/)
+
+![Category page](src/images/)
   
 + This page won't generated if the user didn't log in. In this page the user can change his profile picture or cover, and he can also add his own recipies to the page or edit them and anyone can comment on them.  
-  ![Profile page](src/images/)
+
+![Profile page](src/images/)
   
 + In about us, the user will meet the people who worked on this project with their contact informations.  
-  ![About Us](src/images/ABOUTUS.gif)
+
+![About Us](src/images/ABOUTUS.gif)
   
 ## Recourses
 1- [UNSPLASH](https://unsplash.com/)
