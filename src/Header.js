@@ -22,9 +22,9 @@ class Header extends React.Component {
             Category
           </Link>
 
-          <Link className="nav" to="/news">
+          {/* <Link className="nav" to="/news">
             News
-          </Link>
+          </Link> */}
 
           {isAuthenticated && (
             <>
