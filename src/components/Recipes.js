@@ -5,11 +5,18 @@ import Button from "react-bootstrap/Button";
 import CardGroup from "react-bootstrap/CardGroup";
 import Accordion from "react-bootstrap/Accordion";
 // import CardColumns from "react-bootstrap/CardColumns";
+
+
+import RecipeModal from "./RecipeModal";
+import CommentModal from "./CommentModal";
+
+
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
 import Modal from "react-bootstrap/Modal";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+
 export class Recipes extends Component {
   constructor(props) {
     super(props);
@@ -18,13 +25,25 @@ export class Recipes extends Component {
       serverUrl: process.env.REACT_APP_MY_SERVER,
       showUpComment: false,
       showUpEdit: false,
+      targetRecipe: {},
+      targetId: 99,
     };
   }
-  showComment = () => {
-    this.setState({ showUpComment: !this.state.showUpComment });
+  showComment = async (idx) => {
+    console.log("TTTTTTTTTTTT");
+    this.setState({
+      showUpComment: !this.state.showUpComment,
+      targetRecipe: this.props.data.page[0].recipes[idx],
+      targetId: idx,
+    });
   };
-  showEdit = () => {
-    this.setState({ showUpEdit: !this.state.showUpEdit });
+  showEdit = async (idx) => {
+    console.log("GGGGGGGGGGGGGGGGGGG");
+    this.setState({
+      showUpEdit: !this.state.showUpEdit,
+      targetRecipe: this.props.data.page[0].recipes[idx],
+      targetId: idx,
+    });
   };
   render() {
     console.log("potato");
@@ -41,14 +60,13 @@ export class Recipes extends Component {
                     alt="delete"
                     height="30px"
                     onClick={() => this.props.deleteRecipe(item._id)}
-                    />
+                  />
                   <span>&nbsp; &nbsp; &nbsp;</span>
                   <img
                     src="https://www.pinclipart.com/picdir/big/19-190250_editor-edit-clipart-black-and-white-png-download.png"
                     alt="edit"
-                    id="a{idx}"
                     height="20px"
-                    onClick={this.showEdit}
+                    onClick={() => this.showEdit(idx)}
                   />
                     </Card.Header>
                    
@@ -66,10 +84,10 @@ export class Recipes extends Component {
                     </Accordion.Collapse>
                   </Accordion>
                 </Card.Body>
-                <Button variant="dark" onClick={this.showComment}>
+                <Button variant="dark" onClick={() => this.showComment(idx)}>
                   Comment
                 </Button>
-                <>
+                {/* <>
                   <Modal
                     show={this.state.showUpComment}
                     onHide={this.showComment}
@@ -116,49 +134,9 @@ export class Recipes extends Component {
                       </Form>
                     </Modal.Body>
                   </Modal>
-                </>
+                </> */}
                 {/* edit ============================ */}
 
-                <Modal show={this.state.showUpEdit} onHide={this.showEdit}>
-                  <Modal.Header closeButton>
-                {console.log(idx, item._id)}
-                    <Modal.Title>Update Your Recipe : </Modal.Title>
-                  </Modal.Header>
-                  <Modal.Body>
-                    <Form
-                      onSubmit={(e) => this.props.updateRecipe(e, item._id)}
-                    >
-                      <Form.Group className="mb-3" controlId="editForm">
-                        <Form.Label>Recipe Title :</Form.Label>
-                        <Form.Control
-                          type="text"
-                          placeholder="Recipe Title :"
-                          defaultValue={item.dishTitle}
-                        />
-                        <Form.Label>Recipe Image :</Form.Label>
-                        <Form.Control
-                          type="text"
-                          placeholder="http://example.jpg"
-                          defaultValue={item.dishImg}
-                        />
-                        <Form.Label>Recipe Info :</Form.Label>
-                        <Form.Control
-                          as="textarea"
-                          rows={3}
-                          placeholder="Recipe info :"
-                          defaultValue={item.dishInfo}
-                        />
-                      </Form.Group>
-                      <Button
-                        variant="dark"
-                        type="submit"
-                        onClick={this.showEdit}
-                      >
-                        Add
-                      </Button>
-                    </Form>
-                  </Modal.Body>
-                </Modal>
                 <Card.Footer>
                   <small className="text-muted">
                     Last updated {item.updatedAt}
@@ -169,6 +147,24 @@ export class Recipes extends Component {
             );
           })}
         </CardGroup>
+        {this.state.showUpEdit && (
+          <RecipeModal
+            recipe={this.state.targetRecipe}
+            show={this.state.showUpEdit}
+            showEdit={this.showEdit}
+            updateRecipe={this.props.updateRecipe}
+            targetId={this.state.targetId}
+          />
+        )}
+        {this.state.showUpComment && (
+          <CommentModal
+            recipe={this.state.targetRecipe}
+            show={this.state.showUpComment}
+            showComment={this.showComment}
+            handelComment={this.props.handelComment}
+            targetId={this.state.targetId}
+          />
+        )}
       </div>
     );
   }
