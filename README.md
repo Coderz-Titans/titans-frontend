@@ -1,6 +1,7 @@
 # TITANS-FRONTEND
 
 ![Coderz-Titens](https://avatars.githubusercontent.com/u/86403687?s=200&v=4)
+![ltuc](https://dashboard.madaresonajo.com/images/Luminus%20Technical%20University%20College/1595913289.png )
 
 ## Intro:
 This project repository for a website called Flouvers 101 which contains a variety categories of food recipes which provide you with a short description for each recipe, and you can interact with it, either favorites or share your feedback. 
