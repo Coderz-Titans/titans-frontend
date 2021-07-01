@@ -28,7 +28,7 @@ To make it more interesting ,less confusing we build our website to introduce a 
 
 ## How to use our websites :
 + In homepage we provide a links to all pages and the user can choose also from multiple categorites of foods, each category consists of different types of recipies.
-  ![Home page](src/images/MAIN PAGE1.gif)
+  ![Home page](src/images/MAINPAGE.gif)
   
 + The user can log in by using auth0 and there will be a profile page for him.  
   ![Auth0](src/images/auth0.gif)
