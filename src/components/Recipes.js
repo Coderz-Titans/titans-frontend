@@ -8,7 +8,8 @@ import Accordion from "react-bootstrap/Accordion";
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
 import Modal from "react-bootstrap/Modal";
-
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 export class Recipes extends Component {
   constructor(props) {
     super(props);
@@ -28,11 +29,12 @@ export class Recipes extends Component {
   render() {
     console.log("potato");
     return (
-      <div itemID="recipes">
+      <div id="recipes">
         <CardGroup>
           {this.props.data.page[0].recipes.map((item, idx) => {
             return (
-              <Card style={{ width: "1.5rem" }}>
+              <Row>
+                <Card style={{ width: "20.5rem" }}>
                 <Card.Header>
                   <img
                     src="https://cdn.iconscout.com/icon/premium/png-512-thumb/delete-1432400-1211078.png"
@@ -48,7 +50,8 @@ export class Recipes extends Component {
                     height="20px"
                     onClick={this.showEdit}
                   />
-                </Card.Header>
+                    </Card.Header>
+                   
                 <Card.Img variant="top" src={item.dishImg} />
                 <Card.Title>{item.dishTitle}</Card.Title>
 
@@ -161,7 +164,8 @@ export class Recipes extends Component {
                     Last updated {item.updatedAt}
                   </small>
                 </Card.Footer>
-              </Card>
+                </Card>
+                </Row>
             );
           })}
         </CardGroup>

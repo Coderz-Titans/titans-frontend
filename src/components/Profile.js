@@ -163,8 +163,8 @@ export class Profile extends Component {
     console.log(this.state.data);
 
     return (
-      <div>
-        <div id="profileImages">
+      <div className="profileImages">
+        <div >
           <img
             src={this.state.profileCover}
             alt=""
@@ -177,8 +177,8 @@ export class Profile extends Component {
           {/* <button id="buttonId">Follow</button> */}
         </div>
         <div id="section2">
-          <h2> Headline </h2>
-          <p id="text2">{this.state.info}</p>
+     
+          <h2 id="text2">{this.state.info}</h2>
         </div>
         <AddRecipe addRecipe={this.addRecipe} />
 
