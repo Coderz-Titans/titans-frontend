@@ -51,9 +51,9 @@ export class CategoryCreate extends Component {
                 <Card.Body>
                   <Card.Title>{this.props.title}</Card.Title>
                   <Card.Text>
-                    <p onClick={this.heartRate} class="heartRate">
+                    {/* <p onClick={this.heartRate} class="heartRate">
                       ❤️ = {this.state.heartNumber}
-                    </p>
+                    </p> */}
                   </Card.Text>
                   <Card.Text onClick={this.functionl}> See more </Card.Text>
                   {this.state.show && (
@@ -61,9 +61,9 @@ export class CategoryCreate extends Component {
                       {this.props.summary}
                       <br></br>
 
-                      <p onClick={this.heartRate} class="heartRate">
+                      {/* <p onClick={this.heartRate} class="heartRate">
                         ❤️ = {this.state.heartNumber}
-                      </p>
+                      </p> */}
                     </Card.Text>
                   )}
                 </Card.Body>
