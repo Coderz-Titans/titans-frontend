@@ -37,7 +37,8 @@ export class CommentModal extends Component {
                 this.props.handelComment(
                   e,
                   this.props.recipe._id,
-                  this.props.recipe.autherEmail
+                  this.props.recipe.autherEmail,
+                  this.props.showComment
                 )
               }
             >
@@ -52,10 +53,7 @@ export class CommentModal extends Component {
                   placeholder="Add a New Comment"
                 />
               </Form.Group>
-              <Button
-                variant="dark"
-                type="submit"
-              >
+              <Button variant="dark" type="submit">
                 Comment
               </Button>
             </Form>

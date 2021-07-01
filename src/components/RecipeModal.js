@@ -15,7 +15,11 @@ export class RecipeModal extends Component {
           <Modal.Body>
             <Form
               onSubmit={(e) =>
-                this.props.updateRecipe(e, this.props.recipe._id)
+                this.props.updateRecipe(
+                  e,
+                  this.props.recipe._id,
+                  this.props.showEdit
+                )
               }
             >
               <Form.Group className="mb-3" controlId="editForm">
@@ -39,7 +43,7 @@ export class RecipeModal extends Component {
                   defaultValue={this.props.recipe.dishInfo}
                 />
               </Form.Group>
-              <Button variant="dark" type="submit" onClick={this.props.showEdit}>
+              <Button variant="dark" type="submit">
                 Add
               </Button>
             </Form>
