@@ -1,4 +1,5 @@
 # TITANS-FRONTEND
+
 ![Coderz-Titens](https://avatars.githubusercontent.com/u/86403687?s=200&v=4)
 ![ltuc](https://dashboard.madaresonajo.com/images/Luminus%20Technical%20University%20College/1595913289.png )
 
@@ -13,48 +14,63 @@ This project repository for a website called Flouvers 101 which contains a varie
 - Latifa Amaireh.
 - Sanabel Abu Ezbead.
 -------------------------------------------------------------------------------------------------------------------
-## Problem Domain:
+## Problem Domain: :pushpin:
 There is some difficulty in choosing what you want to eat or cook, especially for mothers 
 To make it more interesting ,less confusing we build our website to introduce a lot of delicious recipes .
+
 ## Wireframe:
-![home-page](src/images/Screenshot_1.png)
-![catogery](src/images/Screenshot_2.png)
-![news](src/images/Screenshot_3.png)
-![profile](src/images/Screenshot_4.png)
-![about-us](src/images/Screenshot_5.png)
-![register](src/images/Screenshot_6.png)
-![batabase](src/images/Screenshot_8.png)
-
-## How to build our websites :
+![Home-page](src/images/Screenshot_1.png)
+![Catogery](src/images/Screenshot_2.png)
+![News](src/images/Screenshot_3.png)
+![Profile](src/images/Screenshot_4.png)
+![About-us](src/images/Screenshot_5.png)
 
 
-## recourses
 
-**https://unsplash.com/**
-**https://colorhunt.co/**
-**https://fonts.google.com/**
-**https://developer.mozilla.org/en-US/**
-**https://dashboard.visme.co/v2/projects/own**
+## How to use our websites :
++ In homepage we provide a links to all pages and the user can choose also from multiple categorites of foods, each category consists of different types of recipies.
 
-## 1- Flavours 101!
+![Home page](src/images/MAINPAGE.gif)
+  
++ The user can log in by using auth0 and there will be a profile page for him.  
+
+![Auth0](src/images/auth0.gif)
+
++ In category page, the user can search for his favourtite food and the result will show to him different ways to cook his specific food. Also there's a dropdown button which unable him to choose to see the most favourite foods provided with other options.    
+
+![Category page](src/images/)
+  
++ This page won't generated if the user didn't log in. In this page the user can change his profile picture or cover, and he can also add his own recipies to the page or edit them and anyone can comment on them.  
+
+![Profile page](src/images/)
+  
++ In about us, the user will meet the people who worked on this project with their contact informations.  
+
+![About Us](src/images/ABOUTUS.gif)
+  
+## Recourses
+1- [UNSPLASH](https://unsplash.com/)
+
+2- [COLORHUNT](https://colorhunt.co/)
+
+3- [FONT GOOGLE](https://fonts.google.com/)
+
+4- [DEVELOPR MOZILLA](https://developer.mozilla.org/en-US/)
+
+5- [DASHBOARD VISME](https://dashboard.visme.co/v2/projects/own)
+
 
 **1- summary of the idea.** :pushpin:
+- A website that contains a variety categories of food recipes which provide you with a short description for each recipe, and you can interact with it, either favorites or share your feedback.
 
-
-  
 **2- What problem or pain point does it solve?** :pushpin:
-
-It guides people to different types of food recipes.
+- It guides people to different types of food recipes.
 
 ---------------------------------------------------------------------------------------------------------------------
 # Domain Modeling : 
 
-https://docs.google.com/document/d/1Ttg4U8wUuYklIU0iK4aq9cR7tyAWd6D9htSQmsacbr0/edit?usp=sharing
-
+![Database](src/images/Screenshot_8.png)
 ---------------------------------------------------------------------------------------------------------------------
-# Wireframes :
-
-https://docs.google.com/document/d/1h8Horimj6TpCoRULUnORSjZVth_MTfcQ361XI7KBaUA/edit?usp=sharing
 
 ---------------------------------------------------------------------------------------------------------------------
 # USER STORIES : 

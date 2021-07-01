@@ -114,7 +114,7 @@ export class category extends Component {
                 class="btn btn-outline-primary"
                 onClick={this.searchFunction}
               >
-                search
+              Search
               </button>
             </div>
           </div>
