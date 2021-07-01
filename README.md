@@ -1,6 +1,5 @@
 # TITANS-FRONTEND
 ![Coderz-Titens](https://avatars.githubusercontent.com/u/86403687?s=200&v=4)
-![flavour101]()
 ![ltuc](https://dashboard.madaresonajo.com/images/Luminus%20Technical%20University%20College/1595913289.png )
 
 ## Intro:
