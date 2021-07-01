@@ -9,10 +9,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
 
 #category {
-  margin-bottom: 5%;
 
 }
 #root {
+  margin-bottom: 5%;
   background-position: center;
   background-repeat: no-repeat;
   background-size:cover;
@@ -67,15 +67,19 @@
 
 /************ SERACH ********************/
 #searchInput {
-  width: 30%;
-  height:65px ;
-  margin-left: 65%;
+  
+  width: 60%;
+  height:10% ;
+  padding: 0%;
+  margin-left: 32%;
   margin-bottom: 5%;
   font-family: "Benne", serif;
 }
 #searchInput input{
-  height: 60px;
-  width: 50%;
+  color: rgb(0, 0, 0);
+  height: 50px;
+  width: 60%;
+opacity: 0.6;
 }
 
 
@@ -93,8 +97,8 @@ color: rgb(253, 253, 253);
   border-width: 3px;
   border-color: #caceca;
   font-size: 25px;
-width: 15%;
-height: 60px;
+width: 20%;
+height: 50px;
 }
 #searchButton:hover{
   background-color: #e99e58;
@@ -196,6 +200,11 @@ height: 60px;
   overflow-y: scroll;
   height: 600px;
   width: 170%;
+}
+
+.collectionCards {
+  background-color: yellow;
+  display:flex;
 }
 
 /**********************/
